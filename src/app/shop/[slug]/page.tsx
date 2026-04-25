@@ -1,0 +1,212 @@
+import { notFound } from 'next/navigation'
+import Link from 'next/link'
+import { getAllProducts, getProductBySlug, getStoryBySlug } from '@/lib/content'
+import DecoDoubleRule from '@/components/DecoDoubleRule'
+
+export async function generateStaticParams() {
+  const products = getAllProducts()
+  return products.map((p) => ({ slug: p.slug }))
+}
+
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const product = getProductBySlug(params.slug)
+  if (!product) return {}
+  return {
+    title: `${product.title} — Long Lost Yogi`,
+    description: product.excerpt,
+  }
+}
+
+export default function ProductPage({ params }: { params: { slug: string } }) {
+  const product = getProductBySlug(params.slug)
+  if (!product) notFound()
+
+  const story = product.story_slug ? getStoryBySlug(product.story_slug) : null
+
+  return (
+    <main style={{ background: '#D9D8D5' }}>
+      <div className="max-w-6xl mx-auto px-6 md:px-12 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+          {/* Images left */}
+          <div className="flex flex-col gap-[1.5px]">
+            <div className="relative overflow-hidden" style={{ aspectRatio: '3/4', background: '#2A2420' }}>
+              <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 4, background: '#896A58', opacity: 0.4 }} />
+            </div>
+            <div className="relative overflow-hidden" style={{ aspectRatio: '4/3', background: '#3A3028' }}>
+              <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 4, background: '#896A58', opacity: 0.4 }} />
+            </div>
+          </div>
+
+          {/* Details right — sticky */}
+          <div className="md:sticky md:top-24 flex flex-col gap-5">
+            <div className="flex flex-wrap gap-2">
+              <span
+                style={{
+                  fontFamily: 'var(--font-josefin)',
+                  fontSize: 9, fontWeight: 600,
+                  letterSpacing: '0.16em',
+                  textTransform: 'uppercase',
+                  color: '#567257',
+                  border: '1px solid rgba(86,114,87,0.5)',
+                  padding: '3px 8px',
+                }}
+              >
+                {product.origin}
+              </span>
+              <span
+                style={{
+                  fontFamily: 'var(--font-josefin)',
+                  fontSize: 9, fontWeight: 600,
+                  letterSpacing: '0.16em',
+                  textTransform: 'uppercase',
+                  color: '#896A58',
+                  border: '1px solid rgba(137,106,88,0.4)',
+                  padding: '3px 8px',
+                }}
+              >
+                {product.category}
+              </span>
+            </div>
+
+            <h1
+              style={{
+                fontFamily: 'var(--font-cormorant)',
+                fontWeight: 300,
+                fontSize: 'clamp(1.6rem,3vw,2.4rem)',
+                color: '#2A2420',
+                lineHeight: 1.2,
+              }}
+            >
+              {product.title}
+            </h1>
+
+            <div style={{ fontFamily: 'var(--font-cormorant)', fontSize: '1.75rem', color: '#2A2420' }}>
+              {product.price}
+            </div>
+
+            <div className="flex items-center gap-3">
+              <div
+                style={{
+                  width: 46, height: 46,
+                  background: '#ACAB9E',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  borderBottom: '2px solid #896A58',
+                  flexShrink: 0,
+                }}
+              >
+                <span style={{ fontFamily: 'var(--font-cormorant)', fontSize: 15, color: '#2A2420' }}>
+                  {product.makerInitials}
+                </span>
+              </div>
+              <div>
+                <div style={{ fontFamily: 'var(--font-cormorant)', fontSize: 15, color: '#2A2420' }}>
+                  {product.maker}
+                </div>
+                <div style={{ fontFamily: 'var(--font-josefin)', fontSize: 9, color: '#896A58', opacity: 0.7 }}>
+                  {product.makerLocation}
+                </div>
+              </div>
+            </div>
+
+            <div style={{ background: '#ACAB9E', padding: '10px 14px' }}>
+              <p style={{ fontFamily: 'var(--font-josefin)', fontSize: 11, color: '#2A2420', opacity: 0.8 }}>
+                {product.shipping}
+              </p>
+            </div>
+
+            <div style={{ borderLeft: '2px solid #567257', paddingLeft: 12 }}>
+              <p style={{ fontFamily: 'var(--font-josefin)', fontSize: 11, color: '#2A2420', opacity: 0.8 }}>
+                {product.giving_back}
+              </p>
+            </div>
+
+            <button
+              disabled
+              style={{
+                background: 'rgba(42,36,32,0.15)',
+                color: 'rgba(42,36,32,0.35)',
+                fontFamily: 'var(--font-josefin)',
+                fontSize: 11, fontWeight: 600,
+                letterSpacing: '0.16em',
+                textTransform: 'uppercase',
+                padding: '14px 24px',
+                border: 'none',
+                cursor: 'not-allowed',
+              }}
+            >
+              Store Opening Soon
+            </button>
+
+            <p style={{ fontFamily: 'var(--font-josefin)', fontSize: 10, color: 'rgba(42,36,32,0.45)' }}>
+              {product.dimensions} · {product.material}
+            </p>
+
+            {story && (
+              <Link
+                href={`/storyboard/${story.slug}`}
+                style={{
+                  fontFamily: 'var(--font-josefin)',
+                  fontSize: 10, fontWeight: 600,
+                  letterSpacing: '0.14em',
+                  textTransform: 'uppercase',
+                  color: '#567257',
+                  textDecoration: 'none',
+                }}
+              >
+                Read the Story →
+              </Link>
+            )}
+          </div>
+        </div>
+
+        {/* Story section */}
+        {story && (
+          <section style={{ background: '#ACAB9E', margin: '4rem -1.5rem -3rem', padding: '3rem 1.5rem' }}>
+            <div className="max-w-4xl mx-auto">
+              <DecoDoubleRule />
+              <div
+                style={{
+                  fontFamily: 'var(--font-josefin)',
+                  fontSize: 8, fontWeight: 600,
+                  letterSpacing: '0.2em',
+                  textTransform: 'uppercase',
+                  color: '#896A58',
+                  marginBottom: 10,
+                }}
+              >
+                The Story Behind This Piece
+              </div>
+              <h2
+                style={{
+                  fontFamily: 'var(--font-cormorant)',
+                  fontWeight: 300,
+                  fontSize: 'clamp(1.4rem,2.5vw,2rem)',
+                  color: '#2A2420',
+                  marginBottom: 24,
+                }}
+              >
+                {story.title}
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <p
+                  style={{
+                    fontFamily: 'var(--font-cormorant)',
+                    fontStyle: 'italic',
+                    fontSize: '1.1rem',
+                    color: '#2A2420',
+                    lineHeight: 1.7,
+                  }}
+                >
+                  {story.excerpt}
+                </p>
+                <div className="relative" style={{ aspectRatio: '4/3', background: '#2A2420' }}>
+                  <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 3, background: '#896A58', opacity: 0.4 }} />
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+      </div>
+    </main>
+  )
+}
