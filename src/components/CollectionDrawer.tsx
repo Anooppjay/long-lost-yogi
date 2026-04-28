@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useEffect } from 'react'
 import type { Product } from '@/lib/content'
@@ -92,7 +92,7 @@ export default function CollectionDrawer({ product, onClose }: CollectionDrawerP
             </div>
             <div
               className="relative overflow-hidden"
-              style={{ aspectRatio: '4/3', background: '#3A3028' }}
+              style={{ aspectRatio: '4/3', background: '#2A2420' }}
             >
               <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 3, background: '#896A58', opacity: 0.4 }} />
             </div>
@@ -212,12 +212,12 @@ export default function CollectionDrawer({ product, onClose }: CollectionDrawerP
             </button>
 
             <p style={{ fontFamily: 'var(--font-josefin)', fontSize: 10, color: 'rgba(42,36,32,0.45)' }}>
-              {product.dimensions} · {product.material}
+              {product.dimensions} Â· {product.material}
             </p>
           </div>
         </div>
 
-        {/* BOTTOM HALF — Story */}
+        {/* BOTTOM HALF â€” Story */}
         <div style={{ borderTop: '1px solid rgba(42,36,32,0.12)' }} className="px-8 py-10">
           <div
             style={{
@@ -241,7 +241,7 @@ export default function CollectionDrawer({ product, onClose }: CollectionDrawerP
               marginBottom: 24,
             }}
           >
-            {product.title} — Made by {product.maker}
+            {product.title} â€” Made by {product.maker}
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

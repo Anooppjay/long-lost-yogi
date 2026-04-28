@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+﻿import type { Config } from 'tailwindcss'
 
 const config: Config = {
   content: [
@@ -18,14 +18,12 @@ const config: Config = {
         'green-light': '#6A8A6A',
         'green-dark': '#3E5240',
         dp: '#2A2420',
+        border: 'rgba(42,36,32,0.12)',
+        'border-mid': 'rgba(42,36,32,0.22)',
       },
       fontFamily: {
         cormorant: ['var(--font-cormorant)', 'Georgia', 'serif'],
         josefin: ['var(--font-josefin)', 'system-ui', 'sans-serif'],
-      },
-      borderColor: {
-        subtle: 'rgba(42,36,32,0.12)',
-        mid: 'rgba(42,36,32,0.22)',
       },
     },
   },

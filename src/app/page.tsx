@@ -1,4 +1,4 @@
-import { getAllProducts, getAllStories, getGivingBackTotal } from '@/lib/content'
+﻿import { getAllProducts, getAllStories, getGivingBackTotal } from '@/lib/content'
 import GivingBackCounter from '@/components/GivingBackCounter'
 import FeaturedListings from '@/components/FeaturedListings'
 import DecoDoubleRule from '@/components/DecoDoubleRule'
@@ -22,7 +22,7 @@ export default function HomePage() {
             position: 'absolute',
             top: 0, right: 0, bottom: 0,
             width: '45%',
-            background: '#3A3028',
+            background: '#2A2420',
             opacity: 0.5,
           }}
         />
@@ -89,7 +89,7 @@ export default function HomePage() {
               lineHeight: 1.8,
             }}
           >
-            Curated from workshops, villages and family ateliers — the long-lost art of knowing where your things come from.
+            Curated from workshops, villages and family ateliers â€” the long-lost art of knowing where your things come from.
           </p>
           <div className="flex flex-wrap gap-3 mb-12">
             <Link
@@ -311,7 +311,7 @@ export default function HomePage() {
                         marginBottom: 10,
                       }}
                     >
-                      {story.origin} · {story.category}
+                      {story.origin} Â· {story.category}
                     </div>
                     <h3
                       style={{
@@ -343,7 +343,7 @@ export default function HomePage() {
                     </p>
                     <DecoDoubleRule />
                     <div style={{ fontFamily: 'var(--font-josefin)', fontSize: 9, color: 'rgba(42,36,32,0.5)' }}>
-                      {story.curator} ·{' '}
+                      {story.curator} Â·{' '}
                       {new Date(story.date).toLocaleDateString('en-AU', {
                         month: 'long',
                         year: 'numeric',

@@ -1,4 +1,4 @@
-import { notFound } from 'next/navigation'
+﻿import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { getAllProducts, getProductBySlug, getStoryBySlug } from '@/lib/content'
 import DecoDoubleRule from '@/components/DecoDoubleRule'
@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const product = getProductBySlug(params.slug)
   if (!product) return {}
   return {
-    title: `${product.title} — Long Lost Yogi`,
+    title: `${product.title} â€” Long Lost Yogi`,
     description: product.excerpt,
   }
 }
@@ -32,12 +32,12 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
             <div className="relative overflow-hidden" style={{ aspectRatio: '3/4', background: '#2A2420' }}>
               <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 4, background: '#896A58', opacity: 0.4 }} />
             </div>
-            <div className="relative overflow-hidden" style={{ aspectRatio: '4/3', background: '#3A3028' }}>
+            <div className="relative overflow-hidden" style={{ aspectRatio: '4/3', background: '#2A2420' }}>
               <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 4, background: '#896A58', opacity: 0.4 }} />
             </div>
           </div>
 
-          {/* Details right — sticky */}
+          {/* Details right â€” sticky */}
           <div className="md:sticky md:top-24 flex flex-col gap-5">
             <div className="flex flex-wrap gap-2">
               <span
@@ -138,7 +138,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
             </button>
 
             <p style={{ fontFamily: 'var(--font-josefin)', fontSize: 10, color: 'rgba(42,36,32,0.45)' }}>
-              {product.dimensions} · {product.material}
+              {product.dimensions} Â· {product.material}
             </p>
 
             {story && (
@@ -153,7 +153,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                   textDecoration: 'none',
                 }}
               >
-                Read the Story →
+                Read the Story â†’
               </Link>
             )}
           </div>

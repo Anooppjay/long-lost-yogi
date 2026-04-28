@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
@@ -109,7 +109,7 @@ export default function StoryboardContent({ stories }: { stories: Story[] }) {
                           color: 'rgba(217,216,213,0.6)',
                         }}
                       >
-                        {story.origin} · {story.category}
+                        {story.origin} Â· {story.category}
                       </span>
                     </div>
                   </div>
@@ -227,7 +227,7 @@ function StoryBand({ story, index }: { story: Story; index: number }) {
             fontFamily: 'var(--font-cormorant)',
             fontWeight: 600,
             fontSize: 'clamp(4rem,10vw,7rem)',
-            color: 'rgba(255,255,255,0.045)',
+            color: 'rgba(217,216,213,0.045)',
             lineHeight: 1,
             pointerEvents: 'none',
             zIndex: 1,
@@ -344,7 +344,7 @@ function StoryBand({ story, index }: { story: Story; index: number }) {
             marginBottom: 14,
           }}
         >
-          {story.origin} · {story.category}
+          {story.origin} Â· {story.category}
         </div>
 
         <h2
@@ -482,7 +482,7 @@ function TaupeQuoteBand({ quote }: { quote: string }) {
           top: '50%', left: '10%',
           width: 200, height: 200,
           borderRadius: '50%',
-          background: 'rgba(255,255,255,0.07)',
+          background: 'rgba(217,216,213,0.07)',
           transform: 'translateY(-50%)',
         }}
       />
@@ -492,7 +492,7 @@ function TaupeQuoteBand({ quote }: { quote: string }) {
           bottom: '-20%', right: '5%',
           width: 300, height: 300,
           borderRadius: '50%',
-          background: 'rgba(255,255,255,0.05)',
+          background: 'rgba(217,216,213,0.05)',
         }}
       />
       <p

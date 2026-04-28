@@ -1,4 +1,4 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 import { getGivingBackTotal } from '@/lib/content'
 
 export default function Footer() {
@@ -50,13 +50,13 @@ export default function Footer() {
               textDecoration: 'none',
             }}
           >
-            Learn More →
+            Learn More â†’
           </Link>
         </div>
       </div>
 
       <div
-        style={{ background: '#2A2420', borderTop: '1px solid rgba(255,255,255,0.05)' }}
+        style={{ background: '#2A2420', borderTop: '1px solid rgba(217,216,213,0.05)' }}
         className="px-6 md:px-12 py-12"
       >
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
@@ -215,7 +215,7 @@ export default function Footer() {
       >
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
           <p style={{ fontFamily: 'var(--font-josefin)', fontSize: 10, color: 'rgba(217,216,213,0.3)' }}>
-            © {new Date().getFullYear()} Long Lost Yogi. All rights reserved.
+            Â© {new Date().getFullYear()} Long Lost Yogi. All rights reserved.
           </p>
           <p style={{ fontFamily: 'var(--font-josefin)', fontSize: 10, color: 'rgba(217,216,213,0.3)' }}>
             Store opening soon.

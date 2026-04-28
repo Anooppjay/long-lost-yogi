@@ -1,4 +1,4 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -12,8 +12,8 @@
   --green-light: #6A8A6A;
   --green-dark: #3E5240;
   --dp: #2A2420;
-  --border: rgba(42, 36, 32, 0.12);
-  --border-mid: rgba(42, 36, 32, 0.22);
+  --border: rgba(42,36,32,0.12);
+  --border-mid: rgba(42,36,32,0.22);
 }
 
 *,
