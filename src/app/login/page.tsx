@@ -16,7 +16,7 @@ export default function LoginPage() {
     padding: '10px 0',
     fontFamily: 'var(--font-josefin)',
     fontSize: 13,
-    color: '#2A2420',
+    color: 'var(--dp)',
     outline: 'none',
   }
 
@@ -26,14 +26,14 @@ export default function LoginPage() {
     fontWeight: 600,
     letterSpacing: '0.18em',
     textTransform: 'uppercase',
-    color: '#896A58',
+    color: 'var(--taupe)',
     display: 'block',
     marginBottom: 6,
   }
 
   return (
     <main
-      style={{ background: '#D9D8D5', minHeight: '80vh', display: 'flex', alignItems: 'center' }}
+      style={{ background: 'var(--bg)', minHeight: '80vh', display: 'flex', alignItems: 'center' }}
     >
       <div className="max-w-md mx-auto px-6 py-16 w-full">
         <DecoDoubleRule />
@@ -42,7 +42,7 @@ export default function LoginPage() {
             fontFamily: 'var(--font-cormorant)',
             fontWeight: 300,
             fontSize: 'clamp(1.8rem,4vw,2.8rem)',
-            color: '#2A2420',
+            color: 'var(--dp)',
             lineHeight: 1.15,
             marginBottom: 8,
           }}
@@ -88,8 +88,8 @@ export default function LoginPage() {
           <button
             type="submit"
             style={{
-              background: '#567257',
-              color: '#D9D8D5',
+              background: 'var(--green)',
+              color: 'var(--bg)',
               fontFamily: 'var(--font-josefin)',
               fontSize: 11,
               fontWeight: 600,
@@ -115,7 +115,7 @@ export default function LoginPage() {
           }}
         >
           Don&apos;t have an account?{' '}
-          <Link href="/curators/apply" style={{ color: '#567257', textDecoration: 'none' }}>
+          <Link href="/curators/apply" style={{ color: 'var(--green)', textDecoration: 'none' }}>
             Apply to curate
           </Link>
         </p>

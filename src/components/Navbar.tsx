@@ -16,13 +16,13 @@ export default function Navbar() {
 
   return (
     <>
-      <div style={{ height: 2, background: '#567257', opacity: 0.65 }} />
+      <div style={{ height: 2, background: 'var(--green)', opacity: 0.65 }} />
 
       <header
         className="relative z-50 flex items-center px-6 md:px-12"
         style={{
           height: 68,
-          background: '#D9D8D5',
+          background: 'var(--bg)',
           borderBottom: '1px solid rgba(42,36,32,0.12)',
         }}
       >
@@ -36,7 +36,7 @@ export default function Navbar() {
               fontFamily: 'var(--font-cormorant)',
               fontSize: 22,
               fontWeight: 400,
-              color: '#2A2420',
+              color: 'var(--dp)',
               lineHeight: 1.1,
             }}
           >
@@ -49,7 +49,7 @@ export default function Navbar() {
               fontWeight: 600,
               letterSpacing: '0.24em',
               textTransform: 'uppercase',
-              color: '#896A58',
+              color: 'var(--taupe)',
             }}
           >
             Found at the source
@@ -68,7 +68,7 @@ export default function Navbar() {
                 fontWeight: 600,
                 letterSpacing: '0.16em',
                 textTransform: 'uppercase',
-                color: '#567257',
+                color: 'var(--green)',
                 textDecoration: 'none',
               }}
             >
@@ -87,7 +87,7 @@ export default function Navbar() {
               alignItems: 'center',
               justifyContent: 'center',
               border: '1px solid rgba(42,36,32,0.22)',
-              color: '#567257',
+              color: 'var(--green)',
             }}
           >
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -103,7 +103,7 @@ export default function Navbar() {
               alignItems: 'center',
               justifyContent: 'center',
               border: '1px solid rgba(42,36,32,0.22)',
-              color: '#567257',
+              color: 'var(--green)',
               background: 'transparent',
               cursor: 'pointer',
             }}
@@ -122,7 +122,7 @@ export default function Navbar() {
               background: 'transparent',
               border: 'none',
               cursor: 'pointer',
-              color: '#2A2420',
+              color: 'var(--dp)',
               marginLeft: 4,
               display: 'flex',
               alignItems: 'center',
@@ -146,7 +146,7 @@ export default function Navbar() {
           />
           <div
             className="absolute top-0 right-0 h-full flex flex-col"
-            style={{ width: 280, background: '#D9D8D5' }}
+            style={{ width: 280, background: 'var(--bg)' }}
           >
             <div className="flex justify-end p-6">
               <button
@@ -155,7 +155,7 @@ export default function Navbar() {
                   background: 'transparent',
                   border: 'none',
                   cursor: 'pointer',
-                  color: '#2A2420',
+                  color: 'var(--dp)',
                 }}
               >
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -174,7 +174,7 @@ export default function Navbar() {
                     fontFamily: 'var(--font-cormorant)',
                     fontSize: 28,
                     fontWeight: 300,
-                    color: '#2A2420',
+                    color: 'var(--dp)',
                     textDecoration: 'none',
                   }}
                 >

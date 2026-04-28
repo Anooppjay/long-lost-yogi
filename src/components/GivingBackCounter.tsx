@@ -44,7 +44,7 @@ export default function GivingBackCounter({ total, currency }: GivingBackCounter
   return (
     <section
       style={{
-        background: '#ACAB9E',
+        background: 'var(--bg-dark)',
         borderTop: '1px solid var(--border)',
         borderBottom: '1px solid var(--border)',
         position: 'relative',
@@ -57,7 +57,7 @@ export default function GivingBackCounter({ total, currency }: GivingBackCounter
           left: 0,
           bottom: 0,
           width: 4,
-          background: '#896A58',
+          background: 'var(--taupe)',
           opacity: 0.5,
         }}
       />
@@ -69,7 +69,7 @@ export default function GivingBackCounter({ total, currency }: GivingBackCounter
             fontWeight: 600,
             letterSpacing: '0.2em',
             textTransform: 'uppercase',
-            color: '#567257',
+            color: 'var(--green)',
             marginBottom: 12,
           }}
         >
@@ -80,7 +80,7 @@ export default function GivingBackCounter({ total, currency }: GivingBackCounter
             fontFamily: 'var(--font-cormorant)',
             fontWeight: 300,
             fontSize: 'clamp(3rem,7vw,4.5rem)',
-            color: '#2A2420',
+            color: 'var(--dp)',
             lineHeight: 1,
             opacity: isZero ? 0.3 : 1,
             transition: 'opacity 0.4s',
@@ -94,7 +94,7 @@ export default function GivingBackCounter({ total, currency }: GivingBackCounter
               fontFamily: 'var(--font-josefin)',
               fontWeight: 300,
               fontSize: 12,
-              color: '#2A2420',
+              color: 'var(--dp)',
               marginTop: 8,
               opacity: 0.6,
             }}
@@ -126,7 +126,7 @@ export default function GivingBackCounter({ total, currency }: GivingBackCounter
                   fontWeight: 600,
                   letterSpacing: '0.2em',
                   textTransform: 'uppercase',
-                  color: '#896A58',
+                  color: 'var(--taupe)',
                   marginBottom: 8,
                 }}
               >
@@ -137,7 +137,7 @@ export default function GivingBackCounter({ total, currency }: GivingBackCounter
                   fontFamily: 'var(--font-josefin)',
                   fontWeight: 300,
                   fontSize: 12,
-                  color: '#2A2420',
+                  color: 'var(--dp)',
                   lineHeight: 1.7,
                   opacity: 0.8,
                 }}

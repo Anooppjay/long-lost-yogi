@@ -15,11 +15,11 @@ export default function ShopPage() {
       {/* PAGE HEADER */}
       <section
         className="relative overflow-hidden"
-        style={{ background: '#2A2420', padding: '5rem 0 4rem' }}
+        style={{ background: 'var(--dp)', padding: '5rem 0 4rem' }}
       >
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0 }}>
-          <div style={{ height: 2, background: '#567257' }} />
-          <div style={{ height: 1, background: '#896A58', marginTop: 3 }} />
+          <div style={{ height: 2, background: 'var(--green)' }} />
+          <div style={{ height: 1, background: 'var(--taupe)', marginTop: 3 }} />
         </div>
         <div
           style={{
@@ -27,7 +27,7 @@ export default function ShopPage() {
             top: 0, bottom: 0,
             right: '30%',
             width: '0.5px',
-            background: '#ACAB9E',
+            background: 'var(--bg-dark)',
             opacity: 0.15,
           }}
         />
@@ -38,7 +38,7 @@ export default function ShopPage() {
               fontFamily: 'var(--font-cormorant)',
               fontWeight: 300,
               fontSize: 'clamp(1.8rem,4.5vw,3.2rem)',
-              color: '#D9D8D5',
+              color: 'var(--bg)',
               lineHeight: 1.2,
               marginBottom: 14,
             }}

@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState, useEffect, useRef, useCallback } from 'react'
 import Link from 'next/link'
@@ -34,8 +34,8 @@ export default function StoryboardContent({ stories }: { stories: Story[] }) {
     background: 'transparent',
     border: 'none',
     cursor: 'pointer',
-    color: active ? '#2A2420' : 'rgba(42,36,32,0.38)',
-    borderBottom: active ? '2px solid #567257' : '2px solid transparent',
+    color: active ? 'var(--dp)' : 'rgba(42,36,32,0.38)',
+    borderBottom: active ? '2px solid var(--green)' : '2px solid transparent',
     whiteSpace: 'nowrap',
   })
 
@@ -44,7 +44,7 @@ export default function StoryboardContent({ stories }: { stories: Story[] }) {
       {/* FILTER BAR */}
       <div
         className="sticky z-40 overflow-x-auto"
-        style={{ top: 0, background: '#D9D8D5', borderBottom: '1px solid rgba(42,36,32,0.12)' }}
+        style={{ top: 0, background: 'var(--bg)', borderBottom: '1px solid rgba(42,36,32,0.12)' }}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between min-w-max">
           <div className="flex items-center">
@@ -75,7 +75,7 @@ export default function StoryboardContent({ stories }: { stories: Story[] }) {
       ))}
 
       {filtered.length === 0 && (
-        <div className="py-32 text-center" style={{ background: '#D9D8D5' }}>
+        <div className="py-32 text-center" style={{ background: 'var(--bg)' }}>
           <p style={{ fontFamily: 'var(--font-josefin)', fontSize: 12, color: 'rgba(42,36,32,0.4)' }}>
             No stories match this filter.
           </p>
@@ -84,14 +84,14 @@ export default function StoryboardContent({ stories }: { stories: Story[] }) {
 
       {/* 3-UP PHOTO GRID */}
       {filtered.length > 0 && (
-        <section style={{ background: '#D9D8D5' }} className="py-12">
+        <section style={{ background: 'var(--bg)' }} className="py-12">
           <div className="max-w-6xl mx-auto px-6 md:px-12">
             <div className="grid grid-cols-3 gap-[1.5px]">
               {filtered.slice(0, 3).map((story) => (
                 <Link key={story.slug} href={`/storyboard/${story.slug}`} style={{ textDecoration: 'none' }}>
                   <div
                     className="photo-grid-item relative overflow-hidden"
-                    style={{ aspectRatio: '4/3', background: '#2A2420' }}
+                    style={{ aspectRatio: '4/3', background: 'var(--dp)' }}
                   >
                     <div
                       className="absolute inset-0 flex items-end p-3"
@@ -160,7 +160,7 @@ function StoryBand({ story, index }: { story: Story; index: number }) {
     })
   }, [])
 
-  const leftStripColor = isOdd ? '#ACAB9E' : '#567257'
+  const leftStripColor = isOdd ? 'var(--bg-dark)' : 'var(--green)'
 
   return (
     <section className="grid grid-cols-1 md:grid-cols-[55fr_45fr]">
@@ -168,7 +168,7 @@ function StoryBand({ story, index }: { story: Story; index: number }) {
       <div
         ref={imageSideRef}
         className="story-band-image-side relative overflow-hidden"
-        style={{ minHeight: 440, background: '#2A2420' }}
+        style={{ minHeight: 440, background: 'var(--dp)' }}
         onMouseMove={handleMouseMove}
         onMouseLeave={() => setParallax({ x: 0, y: 0 })}
         onTouchMove={handleTouchMove}
@@ -178,7 +178,7 @@ function StoryBand({ story, index }: { story: Story; index: number }) {
           style={{
             position: 'absolute',
             inset: '-12px',
-            background: '#2A2420',
+            background: 'var(--dp)',
             transform: `translate(${parallax.x}px, ${parallax.y}px)`,
             transition: 'transform 0.15s ease-out',
           }}
@@ -211,7 +211,7 @@ function StoryBand({ story, index }: { story: Story; index: number }) {
               fontWeight: 600,
               letterSpacing: '0.14em',
               textTransform: 'uppercase',
-              color: '#D9D8D5',
+              color: 'var(--bg)',
             }}
           >
             {story.origin}
@@ -245,7 +245,7 @@ function StoryBand({ story, index }: { story: Story; index: number }) {
             width: 64, height: 64,
             borderRadius: '50%',
             background: 'rgba(137,106,88,0.25)',
-            border: '2.5px solid #D9D8D5',
+            border: '2.5px solid var(--bg)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -260,7 +260,7 @@ function StoryBand({ story, index }: { story: Story; index: number }) {
             ;(e.currentTarget as HTMLDivElement).style.transform = ''
           }}
         >
-          <span style={{ fontFamily: 'var(--font-cormorant)', fontSize: 20, color: '#ACAB9E' }}>
+          <span style={{ fontFamily: 'var(--font-cormorant)', fontSize: 20, color: 'var(--bg-dark)' }}>
             {story.makerInitials}
           </span>
         </div>
@@ -283,14 +283,14 @@ function StoryBand({ story, index }: { story: Story; index: number }) {
             style={{
               width: 28, height: 28,
               borderRadius: '50%',
-              background: '#896A58',
+              background: 'var(--taupe)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               flexShrink: 0,
             }}
           >
-            <span style={{ fontFamily: 'var(--font-cormorant)', fontSize: 11, color: '#D9D8D5' }}>
+            <span style={{ fontFamily: 'var(--font-cormorant)', fontSize: 11, color: 'var(--bg)' }}>
               {story.curator.charAt(0)}
             </span>
           </div>
@@ -299,7 +299,7 @@ function StoryBand({ story, index }: { story: Story; index: number }) {
               fontFamily: 'var(--font-josefin)',
               fontSize: 10,
               fontWeight: 600,
-              color: '#D9D8D5',
+              color: 'var(--bg)',
             }}
           >
             {story.curator}
@@ -312,7 +312,7 @@ function StoryBand({ story, index }: { story: Story; index: number }) {
         ref={textSideRef}
         className="story-band-text-side relative"
         style={{
-          background: isOdd ? '#D9D8D5' : '#ACAB9E',
+          background: isOdd ? 'var(--bg)' : 'var(--bg-dark)',
           padding: '2.5rem 2rem 2.5rem 3rem',
           overflow: 'hidden',
         }}
@@ -323,7 +323,7 @@ function StoryBand({ story, index }: { story: Story; index: number }) {
             top: -10, right: 16,
             fontFamily: 'var(--font-cormorant)',
             fontSize: '7rem',
-            color: '#2A2420',
+            color: 'var(--dp)',
             opacity: 0.05,
             lineHeight: 1,
             userSelect: 'none',
@@ -340,7 +340,7 @@ function StoryBand({ story, index }: { story: Story; index: number }) {
             fontWeight: 600,
             letterSpacing: '0.2em',
             textTransform: 'uppercase',
-            color: isOdd ? '#896A58' : '#567257',
+            color: isOdd ? 'var(--taupe)' : 'var(--green)',
             marginBottom: 14,
           }}
         >
@@ -352,7 +352,7 @@ function StoryBand({ story, index }: { story: Story; index: number }) {
             fontFamily: 'var(--font-cormorant)',
             fontWeight: 300,
             fontSize: 'clamp(1.4rem,2.2vw,1.85rem)',
-            color: '#2A2420',
+            color: 'var(--dp)',
             lineHeight: 1.2,
             marginBottom: 14,
           }}
@@ -390,14 +390,14 @@ function StoryBand({ story, index }: { story: Story; index: number }) {
             gap: 12,
           }}
         >
-          <div style={{ fontFamily: 'var(--font-cormorant)', fontSize: '1.45rem', color: '#2A2420' }}>
+          <div style={{ fontFamily: 'var(--font-cormorant)', fontSize: '1.45rem', color: 'var(--dp)' }}>
             By {story.maker}
           </div>
           <Link
             href={`/storyboard/${story.slug}`}
             style={{
-              background: isOdd ? '#567257' : '#2A2420',
-              color: '#D9D8D5',
+              background: isOdd ? 'var(--green)' : 'var(--dp)',
+              color: 'var(--bg)',
               fontFamily: 'var(--font-josefin)',
               fontSize: 10,
               fontWeight: 600,
@@ -433,7 +433,7 @@ function InlineProductImage() {
 
   return (
     <div ref={ref} className="story-image-interrupt">
-      <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 4, background: '#896A58', opacity: 0.4 }} />
+      <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 4, background: 'var(--taupe)', opacity: 0.4 }} />
       <span
         style={{
           position: 'absolute',
@@ -466,7 +466,7 @@ function TaupeQuoteBand({ quote }: { quote: string }) {
   return (
     <div
       style={{
-        background: '#896A58',
+        background: 'var(--taupe)',
         minHeight: 145,
         position: 'relative',
         overflow: 'hidden',

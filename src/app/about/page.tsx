@@ -45,11 +45,11 @@ export default function AboutPage() {
       {/* HERO */}
       <section
         className="relative overflow-hidden"
-        style={{ background: '#2A2420', padding: '6rem 0 5rem' }}
+        style={{ background: 'var(--dp)', padding: '6rem 0 5rem' }}
       >
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0 }}>
-          <div style={{ height: 2, background: '#567257' }} />
-          <div style={{ height: 1, background: '#896A58', marginTop: 3 }} />
+          <div style={{ height: 2, background: 'var(--green)' }} />
+          <div style={{ height: 1, background: 'var(--taupe)', marginTop: 3 }} />
         </div>
         <div
           style={{
@@ -57,7 +57,7 @@ export default function AboutPage() {
             top: 0, bottom: 0,
             right: '32%',
             width: '0.5px',
-            background: '#ACAB9E',
+            background: 'var(--bg-dark)',
             opacity: 0.15,
           }}
         />
@@ -71,7 +71,7 @@ export default function AboutPage() {
               fontFamily: 'var(--font-cormorant)',
               fontWeight: 300,
               fontSize: 'clamp(2rem,5vw,3.5rem)',
-              color: '#D9D8D5',
+              color: 'var(--bg)',
               lineHeight: 1.15,
               marginBottom: 16,
             }}
@@ -94,20 +94,20 @@ export default function AboutPage() {
       </section>
 
       {/* FOUNDER PHOTO */}
-      <section style={{ background: '#D9D8D5' }} className="pt-16 pb-0">
+      <section style={{ background: 'var(--bg)' }} className="pt-16 pb-0">
         <div className="max-w-4xl mx-auto px-6 md:px-12">
           <div
             className="relative overflow-hidden"
-            style={{ width: '100%', aspectRatio: '16/7', background: '#2A2420' }}
+            style={{ width: '100%', aspectRatio: '16/7', background: 'var(--dp)' }}
           >
-            <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 4, background: '#896A58', opacity: 0.4 }} />
+            <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 4, background: 'var(--taupe)', opacity: 0.4 }} />
             <CornerBrackets opacity={0.3} size={20} />
           </div>
         </div>
       </section>
 
       {/* FIVE SECTIONS */}
-      <section style={{ background: '#D9D8D5' }} className="py-16">
+      <section style={{ background: 'var(--bg)' }} className="py-16">
         <div className="max-w-4xl mx-auto px-6 md:px-12">
           <div className="flex flex-col gap-20">
             {sections.map((section, i) => (
@@ -120,7 +120,7 @@ export default function AboutPage() {
                     fontWeight: 600,
                     letterSpacing: '0.2em',
                     textTransform: 'uppercase',
-                    color: '#896A58',
+                    color: 'var(--taupe)',
                     marginBottom: 12,
                   }}
                 >
@@ -131,7 +131,7 @@ export default function AboutPage() {
                     fontFamily: 'var(--font-cormorant)',
                     fontWeight: 300,
                     fontSize: 'clamp(1.5rem,2.5vw,2.2rem)',
-                    color: '#2A2420',
+                    color: 'var(--dp)',
                     lineHeight: 1.2,
                     marginBottom: 16,
                   }}
@@ -151,7 +151,7 @@ export default function AboutPage() {
                 >
                   {section.body}
                 </p>
-                <blockquote style={{ borderLeft: '2px solid #896A58', paddingLeft: 16 }}>
+                <blockquote style={{ borderLeft: '2px solid var(--taupe)', paddingLeft: 16 }}>
                   <p
                     style={{
                       fontFamily: 'var(--font-cormorant)',

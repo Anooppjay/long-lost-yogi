@@ -29,8 +29,8 @@ export default function ShopContent({ products }: { products: Product[] }) {
     background: 'transparent',
     border: 'none',
     cursor: 'pointer',
-    color: active ? '#2A2420' : 'rgba(42,36,32,0.38)',
-    borderBottom: active ? '2px solid #567257' : '2px solid transparent',
+    color: active ? 'var(--dp)' : 'rgba(42,36,32,0.38)',
+    borderBottom: active ? '2px solid var(--green)' : '2px solid transparent',
     whiteSpace: 'nowrap',
   })
 
@@ -39,7 +39,7 @@ export default function ShopContent({ products }: { products: Product[] }) {
       {/* FILTER BAR */}
       <div
         className="sticky z-40 overflow-x-auto"
-        style={{ top: 0, background: '#D9D8D5', borderBottom: '1px solid rgba(42,36,32,0.12)' }}
+        style={{ top: 0, background: 'var(--bg)', borderBottom: '1px solid rgba(42,36,32,0.12)' }}
       >
         <div className="max-w-6xl mx-auto px-6 md:px-12 flex items-center justify-between min-w-max">
           <div className="flex items-center">
@@ -60,7 +60,7 @@ export default function ShopContent({ products }: { products: Product[] }) {
       </div>
 
       {/* PRODUCT GRID */}
-      <section style={{ background: '#D9D8D5' }} className="py-16">
+      <section style={{ background: 'var(--bg)' }} className="py-16">
         <div className="max-w-6xl mx-auto px-6 md:px-12">
           {filtered.length === 0 ? (
             <p style={{ fontFamily: 'var(--font-josefin)', fontSize: 12, color: 'rgba(42,36,32,0.4)', textAlign: 'center', padding: '4rem 0' }}>
@@ -94,13 +94,13 @@ function ProductCard({ product, onClick }: { product: Product; onClick: () => vo
       onClick={onClick}
       className="group"
       style={{
-        background: '#D9D8D5',
+        background: 'var(--bg)',
         border: '1px solid rgba(42,36,32,0.12)',
         cursor: 'pointer',
         transition: 'border-color 0.2s',
       }}
       onMouseEnter={(e) => {
-        ;(e.currentTarget as HTMLDivElement).style.borderColor = '#567257'
+        ;(e.currentTarget as HTMLDivElement).style.borderColor = 'var(--green)'
       }}
       onMouseLeave={(e) => {
         ;(e.currentTarget as HTMLDivElement).style.borderColor = 'rgba(42,36,32,0.12)'
@@ -108,14 +108,14 @@ function ProductCard({ product, onClick }: { product: Product; onClick: () => vo
     >
       <div
         className="relative overflow-hidden"
-        style={{ aspectRatio: '3/4', background: '#2A2420' }}
+        style={{ aspectRatio: '3/4', background: 'var(--dp)' }}
       >
         <div
           style={{
             position: 'absolute', top: 8, left: 8,
             width: 18, height: 18,
-            borderTop: '1px solid #ACAB9E',
-            borderLeft: '1px solid #ACAB9E',
+            borderTop: '1px solid var(--bg-dark)',
+            borderLeft: '1px solid var(--bg-dark)',
             zIndex: 1,
           }}
         />
@@ -123,8 +123,8 @@ function ProductCard({ product, onClick }: { product: Product; onClick: () => vo
           style={{
             position: 'absolute', top: 10, right: 10,
             zIndex: 1,
-            background: '#D9D8D5',
-            color: '#567257',
+            background: 'var(--bg)',
+            color: 'var(--green)',
             fontFamily: 'var(--font-josefin)',
             fontSize: 8, fontWeight: 600,
             letterSpacing: '0.12em',
@@ -139,7 +139,7 @@ function ProductCard({ product, onClick }: { product: Product; onClick: () => vo
           style={{
             position: 'absolute', top: 0, left: 0, bottom: 0,
             width: 3,
-            background: '#896A58',
+            background: 'var(--taupe)',
             opacity: 0.4,
           }}
         />
@@ -153,7 +153,7 @@ function ProductCard({ product, onClick }: { product: Product; onClick: () => vo
               fontSize: 10, fontWeight: 600,
               letterSpacing: '0.16em',
               textTransform: 'uppercase',
-              color: '#D9D8D5',
+              color: 'var(--bg)',
             }}
           >
             View &amp; Read
@@ -168,7 +168,7 @@ function ProductCard({ product, onClick }: { product: Product; onClick: () => vo
             fontSize: 8, fontWeight: 600,
             letterSpacing: '0.14em',
             textTransform: 'uppercase',
-            color: '#896A58',
+            color: 'var(--taupe)',
             marginBottom: 6,
           }}
         >
@@ -197,18 +197,18 @@ function ProductCard({ product, onClick }: { product: Product; onClick: () => vo
             style={{
               width: 26, height: 26,
               borderRadius: '50%',
-              background: '#ACAB9E',
+              background: 'var(--bg-dark)',
               border: '1px solid rgba(42,36,32,0.22)',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               flexShrink: 0,
             }}
           >
-            <span style={{ fontFamily: 'var(--font-cormorant)', fontSize: 10, color: '#2A2420' }}>
+            <span style={{ fontFamily: 'var(--font-cormorant)', fontSize: 10, color: 'var(--dp)' }}>
               {product.makerInitials}
             </span>
           </div>
           <div>
-            <div style={{ fontFamily: 'var(--font-josefin)', fontSize: 10, fontWeight: 600, color: '#2A2420' }}>
+            <div style={{ fontFamily: 'var(--font-josefin)', fontSize: 10, fontWeight: 600, color: 'var(--dp)' }}>
               {product.maker}
             </div>
             <div style={{ fontFamily: 'var(--font-josefin)', fontSize: 8, fontWeight: 300, color: 'rgba(42,36,32,0.5)' }}>
@@ -216,7 +216,7 @@ function ProductCard({ product, onClick }: { product: Product; onClick: () => vo
             </div>
           </div>
         </div>
-        <div style={{ fontFamily: 'var(--font-cormorant)', fontSize: '1.25rem', color: '#2A2420' }}>
+        <div style={{ fontFamily: 'var(--font-cormorant)', fontSize: '1.25rem', color: 'var(--dp)' }}>
           {product.price}
         </div>
       </div>

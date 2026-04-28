@@ -15,12 +15,12 @@ export default function DashboardPage() {
   }>
 
   return (
-    <main style={{ background: '#D9D8D5' }}>
+    <main style={{ background: 'var(--bg)' }}>
       {/* HERO */}
-      <section style={{ background: '#2A2420', padding: '4rem 0 3rem' }}>
+      <section style={{ background: 'var(--dp)', padding: '4rem 0 3rem' }}>
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0 }}>
-          <div style={{ height: 2, background: '#567257' }} />
-          <div style={{ height: 1, background: '#896A58', marginTop: 3 }} />
+          <div style={{ height: 2, background: 'var(--green)' }} />
+          <div style={{ height: 1, background: 'var(--taupe)', marginTop: 3 }} />
         </div>
         <div className="max-w-6xl mx-auto px-6 md:px-12">
           <DecoDoubleRule />
@@ -29,7 +29,7 @@ export default function DashboardPage() {
               fontFamily: 'var(--font-cormorant)',
               fontWeight: 300,
               fontSize: 'clamp(1.5rem,3vw,2.5rem)',
-              color: '#D9D8D5',
+              color: 'var(--bg)',
               lineHeight: 1.2,
             }}
           >
@@ -50,7 +50,7 @@ export default function DashboardPage() {
                 fontWeight: 600,
                 letterSpacing: '0.2em',
                 textTransform: 'uppercase',
-                color: '#896A58',
+                color: 'var(--taupe)',
                 marginBottom: 20,
               }}
             >
@@ -81,7 +81,7 @@ export default function DashboardPage() {
                             fontWeight: 600,
                             letterSpacing: '0.16em',
                             textTransform: 'uppercase',
-                            color: '#896A58',
+                            color: 'var(--taupe)',
                             textAlign: 'left',
                             padding: '8px 12px 8px 0',
                           }}
@@ -101,7 +101,7 @@ export default function DashboardPage() {
                           style={{
                             fontFamily: 'var(--font-josefin)',
                             fontSize: 11,
-                            color: '#2A2420',
+                            color: 'var(--dp)',
                             padding: '12px 12px 12px 0',
                           }}
                         >
@@ -111,7 +111,7 @@ export default function DashboardPage() {
                           style={{
                             fontFamily: 'var(--font-josefin)',
                             fontSize: 11,
-                            color: '#2A2420',
+                            color: 'var(--dp)',
                             padding: '12px 12px 12px 0',
                           }}
                         >
@@ -131,7 +131,7 @@ export default function DashboardPage() {
                           style={{
                             fontFamily: 'var(--font-cormorant)',
                             fontSize: '1rem',
-                            color: '#2A2420',
+                            color: 'var(--dp)',
                             padding: '12px 12px 12px 0',
                           }}
                         >
@@ -151,7 +151,7 @@ export default function DashboardPage() {
                                   ? 'rgba(86,114,87,0.12)'
                                   : 'rgba(137,106,88,0.12)',
                               color:
-                                order.status === 'shipped' ? '#567257' : '#896A58',
+                                order.status === 'shipped' ? 'var(--green)' : 'var(--taupe)',
                             }}
                           >
                             {order.status}
@@ -175,7 +175,7 @@ export default function DashboardPage() {
                 fontWeight: 600,
                 letterSpacing: '0.2em',
                 textTransform: 'uppercase',
-                color: '#896A58',
+                color: 'var(--taupe)',
                 marginBottom: 20,
               }}
             >

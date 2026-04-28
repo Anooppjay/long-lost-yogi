@@ -48,11 +48,11 @@ export default function GivingBackPage() {
       {/* HERO */}
       <section
         className="relative overflow-hidden"
-        style={{ background: '#2A2420', padding: '6rem 0 5rem' }}
+        style={{ background: 'var(--dp)', padding: '6rem 0 5rem' }}
       >
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0 }}>
-          <div style={{ height: 2, background: '#567257' }} />
-          <div style={{ height: 1, background: '#896A58', marginTop: 3 }} />
+          <div style={{ height: 2, background: 'var(--green)' }} />
+          <div style={{ height: 1, background: 'var(--taupe)', marginTop: 3 }} />
         </div>
         <div style={{ position: 'absolute', inset: '2rem' }}>
           <CornerBrackets opacity={0.2} size={22} />
@@ -64,7 +64,7 @@ export default function GivingBackPage() {
               fontFamily: 'var(--font-cormorant)',
               fontWeight: 300,
               fontSize: 'clamp(2rem,5vw,3.5rem)',
-              color: '#D9D8D5',
+              color: 'var(--bg)',
               lineHeight: 1.15,
               marginBottom: 16,
             }}
@@ -90,7 +90,7 @@ export default function GivingBackPage() {
       <GivingBackCounter total={givingBack.total} currency={givingBack.currency} />
 
       {/* 4-STEP GRID */}
-      <section style={{ background: '#D9D8D5' }} className="py-20">
+      <section style={{ background: 'var(--bg)' }} className="py-20">
         <div className="max-w-5xl mx-auto px-6 md:px-12">
           <div className="mb-12">
             <DecoDoubleRule />
@@ -100,7 +100,7 @@ export default function GivingBackPage() {
                 fontSize: 9, fontWeight: 600,
                 letterSpacing: '0.2em',
                 textTransform: 'uppercase',
-                color: '#896A58',
+                color: 'var(--taupe)',
                 marginBottom: 10,
               }}
             >
@@ -111,7 +111,7 @@ export default function GivingBackPage() {
                 fontFamily: 'var(--font-cormorant)',
                 fontWeight: 300,
                 fontSize: 'clamp(1.5rem,2.5vw,2.2rem)',
-                color: '#2A2420',
+                color: 'var(--dp)',
               }}
             >
               From purchase to community.
@@ -121,14 +121,14 @@ export default function GivingBackPage() {
             {steps.map((step) => (
               <div
                 key={step.number}
-                style={{ borderTop: '2px solid #896A58', paddingTop: 20 }}
+                style={{ borderTop: '2px solid var(--taupe)', paddingTop: 20 }}
               >
                 <div
                   style={{
                     fontFamily: 'var(--font-cormorant)',
                     fontSize: '2rem',
                     fontWeight: 300,
-                    color: '#896A58',
+                    color: 'var(--taupe)',
                     opacity: 0.6,
                     marginBottom: 12,
                   }}
@@ -140,7 +140,7 @@ export default function GivingBackPage() {
                     fontFamily: 'var(--font-cormorant)',
                     fontWeight: 400,
                     fontSize: '1.2rem',
-                    color: '#2A2420',
+                    color: 'var(--dp)',
                     marginBottom: 10,
                   }}
                 >
@@ -164,7 +164,7 @@ export default function GivingBackPage() {
       </section>
 
       {/* COMMUNITY CARDS */}
-      <section style={{ background: '#ACAB9E' }} className="py-20">
+      <section style={{ background: 'var(--bg-dark)' }} className="py-20">
         <div className="max-w-5xl mx-auto px-6 md:px-12">
           <div className="mb-12">
             <DecoDoubleRule />
@@ -174,7 +174,7 @@ export default function GivingBackPage() {
                 fontSize: 9, fontWeight: 600,
                 letterSpacing: '0.2em',
                 textTransform: 'uppercase',
-                color: '#567257',
+                color: 'var(--green)',
                 marginBottom: 10,
               }}
             >
@@ -185,7 +185,7 @@ export default function GivingBackPage() {
                 fontFamily: 'var(--font-cormorant)',
                 fontWeight: 300,
                 fontSize: 'clamp(1.5rem,2.5vw,2.2rem)',
-                color: '#2A2420',
+                color: 'var(--dp)',
               }}
             >
               Where the giving back goes.
@@ -196,8 +196,8 @@ export default function GivingBackPage() {
               <div
                 key={card.name}
                 style={{
-                  background: '#D9D8D5',
-                  borderTop: '2px solid #896A58',
+                  background: 'var(--bg)',
+                  borderTop: '2px solid var(--taupe)',
                   padding: '20px',
                 }}
               >
@@ -207,7 +207,7 @@ export default function GivingBackPage() {
                     fontSize: 8, fontWeight: 600,
                     letterSpacing: '0.16em',
                     textTransform: 'uppercase',
-                    color: '#896A58',
+                    color: 'var(--taupe)',
                     marginBottom: 8,
                   }}
                 >
@@ -218,7 +218,7 @@ export default function GivingBackPage() {
                     fontFamily: 'var(--font-cormorant)',
                     fontWeight: 400,
                     fontSize: '1.1rem',
-                    color: '#2A2420',
+                    color: 'var(--dp)',
                     marginBottom: 8,
                   }}
                 >
@@ -242,7 +242,7 @@ export default function GivingBackPage() {
       </section>
 
       {/* CLOSING QUOTE */}
-      <section style={{ background: '#D9D8D5' }} className="py-24">
+      <section style={{ background: 'var(--bg)' }} className="py-24">
         <div className="max-w-3xl mx-auto px-6 md:px-12 text-center">
           <DecoDoubleRule className="mx-auto" />
           <p
@@ -250,7 +250,7 @@ export default function GivingBackPage() {
               fontFamily: 'var(--font-cormorant)',
               fontStyle: 'italic',
               fontSize: 'clamp(1.3rem,2.5vw,1.8rem)',
-              color: '#2A2420',
+              color: 'var(--dp)',
               lineHeight: 1.6,
               opacity: 0.85,
             }}

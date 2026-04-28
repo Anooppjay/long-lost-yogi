@@ -45,11 +45,11 @@ export default function CuratorsPage() {
       {/* HERO */}
       <section
         className="relative overflow-hidden"
-        style={{ background: '#2A2420', padding: '6rem 0 5rem' }}
+        style={{ background: 'var(--dp)', padding: '6rem 0 5rem' }}
       >
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0 }}>
-          <div style={{ height: 2, background: '#567257' }} />
-          <div style={{ height: 1, background: '#896A58', marginTop: 3 }} />
+          <div style={{ height: 2, background: 'var(--green)' }} />
+          <div style={{ height: 1, background: 'var(--taupe)', marginTop: 3 }} />
         </div>
         <div style={{ position: 'absolute', inset: '2rem' }}>
           <CornerBrackets opacity={0.2} size={22} />
@@ -61,7 +61,7 @@ export default function CuratorsPage() {
               fontFamily: 'var(--font-cormorant)',
               fontWeight: 300,
               fontSize: 'clamp(2rem,5vw,3.5rem)',
-              color: '#D9D8D5',
+              color: 'var(--bg)',
               lineHeight: 1.15,
               marginBottom: 16,
             }}
@@ -84,7 +84,7 @@ export default function CuratorsPage() {
       </section>
 
       {/* NUMBERED STEPS */}
-      <section style={{ background: '#D9D8D5' }} className="py-20">
+      <section style={{ background: 'var(--bg)' }} className="py-20">
         <div className="max-w-5xl mx-auto px-6 md:px-12">
           <div className="mb-12">
             <DecoDoubleRule />
@@ -94,7 +94,7 @@ export default function CuratorsPage() {
                 fontSize: 9, fontWeight: 600,
                 letterSpacing: '0.2em',
                 textTransform: 'uppercase',
-                color: '#896A58',
+                color: 'var(--taupe)',
                 marginBottom: 10,
               }}
             >
@@ -105,7 +105,7 @@ export default function CuratorsPage() {
                 fontFamily: 'var(--font-cormorant)',
                 fontWeight: 300,
                 fontSize: 'clamp(1.5rem,2.5vw,2.2rem)',
-                color: '#2A2420',
+                color: 'var(--dp)',
               }}
             >
               The four steps of curation.
@@ -119,7 +119,7 @@ export default function CuratorsPage() {
                     fontFamily: 'var(--font-cormorant)',
                     fontSize: '2.5rem',
                     fontWeight: 300,
-                    color: '#896A58',
+                    color: 'var(--taupe)',
                     opacity: 0.45,
                     lineHeight: 1,
                     flexShrink: 0,
@@ -134,7 +134,7 @@ export default function CuratorsPage() {
                       fontFamily: 'var(--font-cormorant)',
                       fontWeight: 400,
                       fontSize: '1.2rem',
-                      color: '#2A2420',
+                      color: 'var(--dp)',
                       marginBottom: 8,
                     }}
                   >
@@ -159,7 +159,7 @@ export default function CuratorsPage() {
       </section>
 
       {/* QUALITY STANDARDS */}
-      <section style={{ background: '#ACAB9E' }} className="py-20">
+      <section style={{ background: 'var(--bg-dark)' }} className="py-20">
         <div className="max-w-5xl mx-auto px-6 md:px-12">
           <div className="mb-12">
             <DecoDoubleRule />
@@ -169,7 +169,7 @@ export default function CuratorsPage() {
                 fontSize: 9, fontWeight: 600,
                 letterSpacing: '0.2em',
                 textTransform: 'uppercase',
-                color: '#567257',
+                color: 'var(--green)',
                 marginBottom: 10,
               }}
             >
@@ -180,7 +180,7 @@ export default function CuratorsPage() {
                 fontFamily: 'var(--font-cormorant)',
                 fontWeight: 300,
                 fontSize: 'clamp(1.5rem,2.5vw,2.2rem)',
-                color: '#2A2420',
+                color: 'var(--dp)',
               }}
             >
               What every curator commits to.
@@ -197,7 +197,7 @@ export default function CuratorsPage() {
                     fontFamily: 'var(--font-josefin)',
                     fontSize: 10, fontWeight: 600,
                     letterSpacing: '0.12em',
-                    color: '#2A2420',
+                    color: 'var(--dp)',
                     marginBottom: 6,
                   }}
                 >
@@ -221,10 +221,10 @@ export default function CuratorsPage() {
       </section>
 
       {/* GREEN CTA */}
-      <section className="relative overflow-hidden" style={{ background: '#567257' }}>
+      <section className="relative overflow-hidden" style={{ background: 'var(--green)' }}>
         <div className="mx-6 md:mx-12 pt-10">
-          <div style={{ height: 2, background: '#ACAB9E', opacity: 0.4 }} />
-          <div style={{ height: 1, background: '#896A58', opacity: 0.3, marginTop: 3 }} />
+          <div style={{ height: 2, background: 'var(--bg-dark)', opacity: 0.4 }} />
+          <div style={{ height: 1, background: 'var(--taupe)', opacity: 0.3, marginTop: 3 }} />
         </div>
         <div className="relative max-w-4xl mx-auto px-6 md:px-12 py-16 text-center">
           <div
@@ -244,7 +244,7 @@ export default function CuratorsPage() {
               fontFamily: 'var(--font-cormorant)',
               fontWeight: 300,
               fontSize: 'clamp(1.8rem,3.5vw,2.8rem)',
-              color: '#D9D8D5',
+              color: 'var(--bg)',
               lineHeight: 1.2,
               maxWidth: 560,
               margin: '0 auto 16px',
@@ -268,8 +268,8 @@ export default function CuratorsPage() {
           <Link
             href="/curators/apply"
             style={{
-              background: '#2A2420',
-              color: '#D9D8D5',
+              background: 'var(--dp)',
+              color: 'var(--bg)',
               fontFamily: 'var(--font-josefin)',
               fontSize: 11, fontWeight: 600,
               letterSpacing: '0.16em',
@@ -283,8 +283,8 @@ export default function CuratorsPage() {
           </Link>
         </div>
         <div className="mx-6 md:mx-12 pb-10">
-          <div style={{ height: 2, background: '#ACAB9E', opacity: 0.4 }} />
-          <div style={{ height: 1, background: '#896A58', opacity: 0.3, marginTop: 3 }} />
+          <div style={{ height: 2, background: 'var(--bg-dark)', opacity: 0.4 }} />
+          <div style={{ height: 1, background: 'var(--taupe)', opacity: 0.3, marginTop: 3 }} />
         </div>
       </section>
     </main>

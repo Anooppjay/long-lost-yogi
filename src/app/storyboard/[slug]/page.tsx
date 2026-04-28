@@ -36,7 +36,7 @@ export default function StoryPage({ params }: { params: { slug: string } }) {
       {/* HERO */}
       <section
         className="relative overflow-hidden"
-        style={{ minHeight: 480, background: '#2A2420', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}
+        style={{ minHeight: 480, background: 'var(--dp)', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}
       >
         <div
           style={{
@@ -50,13 +50,13 @@ export default function StoryPage({ params }: { params: { slug: string } }) {
             position: 'absolute',
             top: 0, left: 0, bottom: 0,
             width: 4,
-            background: '#896A58',
+            background: 'var(--taupe)',
             opacity: 0.4,
           }}
         />
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0 }}>
-          <div style={{ height: 2, background: '#ACAB9E', opacity: 0.8 }} />
-          <div style={{ height: 1, background: '#896A58', opacity: 0.45, marginTop: 3 }} />
+          <div style={{ height: 2, background: 'var(--bg-dark)', opacity: 0.8 }} />
+          <div style={{ height: 1, background: 'var(--taupe)', opacity: 0.45, marginTop: 3 }} />
         </div>
 
         <div className="relative max-w-4xl mx-auto px-6 md:px-12 pb-14 pt-32 w-full">
@@ -94,7 +94,7 @@ export default function StoryPage({ params }: { params: { slug: string } }) {
                 fontWeight: 600,
                 letterSpacing: '0.16em',
                 textTransform: 'uppercase',
-                color: '#D9D8D5',
+                color: 'var(--bg)',
                 border: '1px solid rgba(217,216,213,0.25)',
                 padding: '3px 8px',
               }}
@@ -108,7 +108,7 @@ export default function StoryPage({ params }: { params: { slug: string } }) {
                 fontWeight: 600,
                 letterSpacing: '0.16em',
                 textTransform: 'uppercase',
-                color: '#D9D8D5',
+                color: 'var(--bg)',
                 border: '1px solid rgba(217,216,213,0.25)',
                 padding: '3px 8px',
               }}
@@ -122,7 +122,7 @@ export default function StoryPage({ params }: { params: { slug: string } }) {
               fontFamily: 'var(--font-cormorant)',
               fontWeight: 300,
               fontSize: 'clamp(1.8rem,4vw,3rem)',
-              color: '#D9D8D5',
+              color: 'var(--bg)',
               lineHeight: 1.2,
               marginBottom: 20,
             }}
@@ -135,13 +135,13 @@ export default function StoryPage({ params }: { params: { slug: string } }) {
               style={{
                 width: 30, height: 30,
                 borderRadius: '50%',
-                background: '#896A58',
+                background: 'var(--taupe)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
               }}
             >
-              <span style={{ fontFamily: 'var(--font-cormorant)', fontSize: 12, color: '#D9D8D5' }}>
+              <span style={{ fontFamily: 'var(--font-cormorant)', fontSize: 12, color: 'var(--bg)' }}>
                 {story.curator.charAt(0)}
               </span>
             </div>
@@ -158,7 +158,7 @@ export default function StoryPage({ params }: { params: { slug: string } }) {
       </section>
 
       {/* BODY */}
-      <article style={{ background: '#D9D8D5' }} className="py-16">
+      <article style={{ background: 'var(--bg)' }} className="py-16">
         <div className="max-w-[780px] mx-auto px-6 md:px-12">
           {/* Opening excerpt */}
           <p
@@ -166,7 +166,7 @@ export default function StoryPage({ params }: { params: { slug: string } }) {
               fontFamily: 'var(--font-cormorant)',
               fontStyle: 'italic',
               fontSize: 'clamp(1.2rem,2vw,1.5rem)',
-              color: '#2A2420',
+              color: 'var(--dp)',
               lineHeight: 1.7,
               borderBottom: '1px solid rgba(42,36,32,0.12)',
               paddingBottom: '2.5rem',
@@ -184,7 +184,7 @@ export default function StoryPage({ params }: { params: { slug: string } }) {
                   fontFamily: i === 0 ? 'var(--font-cormorant)' : 'var(--font-josefin)',
                   fontWeight: i === 0 ? 300 : 300,
                   fontSize: i === 0 ? '1.1rem' : 13,
-                  color: i === 0 ? '#2A2420' : 'rgba(42,36,32,0.82)',
+                  color: i === 0 ? 'var(--dp)' : 'rgba(42,36,32,0.82)',
                   lineHeight: 1.85,
                   marginBottom: '1.5rem',
                 }}
@@ -204,19 +204,19 @@ export default function StoryPage({ params }: { params: { slug: string } }) {
               style={{
                 width: 44, height: 44,
                 borderRadius: '50%',
-                background: '#ACAB9E',
+                background: 'var(--bg-dark)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 flexShrink: 0,
               }}
             >
-              <span style={{ fontFamily: 'var(--font-cormorant)', fontSize: 17, color: '#2A2420' }}>
+              <span style={{ fontFamily: 'var(--font-cormorant)', fontSize: 17, color: 'var(--dp)' }}>
                 {story.curator.charAt(0)}
               </span>
             </div>
             <div>
-              <div style={{ fontFamily: 'var(--font-josefin)', fontSize: 11, fontWeight: 600, color: '#2A2420' }}>
+              <div style={{ fontFamily: 'var(--font-josefin)', fontSize: 11, fontWeight: 600, color: 'var(--dp)' }}>
                 {story.curator}
               </div>
               <div style={{ fontFamily: 'var(--font-josefin)', fontSize: 10, color: 'rgba(42,36,32,0.5)' }}>
@@ -229,7 +229,7 @@ export default function StoryPage({ params }: { params: { slug: string } }) {
       </article>
 
       {/* MAKER PROFILE */}
-      <section style={{ background: '#D9D8D5', borderTop: '1px solid rgba(42,36,32,0.12)' }} className="py-12">
+      <section style={{ background: 'var(--bg)', borderTop: '1px solid rgba(42,36,32,0.12)' }} className="py-12">
         <div className="max-w-[780px] mx-auto px-6 md:px-12">
           <DecoDoubleRule />
           <div
@@ -239,7 +239,7 @@ export default function StoryPage({ params }: { params: { slug: string } }) {
               fontWeight: 600,
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
-              color: '#896A58',
+              color: 'var(--taupe)',
               marginBottom: 20,
             }}
           >
@@ -250,7 +250,7 @@ export default function StoryPage({ params }: { params: { slug: string } }) {
               <div
                 style={{
                   width: 120, height: 120,
-                  background: '#ACAB9E',
+                  background: 'var(--bg-dark)',
                   position: 'relative',
                   flexShrink: 0,
                   display: 'flex',
@@ -258,7 +258,7 @@ export default function StoryPage({ params }: { params: { slug: string } }) {
                   justifyContent: 'center',
                 }}
               >
-                <span style={{ fontFamily: 'var(--font-cormorant)', fontSize: 36, color: '#2A2420' }}>
+                <span style={{ fontFamily: 'var(--font-cormorant)', fontSize: 36, color: 'var(--dp)' }}>
                   {story.makerInitials}
                 </span>
                 <div
@@ -266,7 +266,7 @@ export default function StoryPage({ params }: { params: { slug: string } }) {
                     position: 'absolute',
                     bottom: 0, left: 0, right: 0,
                     height: 2,
-                    background: '#896A58',
+                    background: 'var(--taupe)',
                   }}
                 />
               </div>
@@ -277,7 +277,7 @@ export default function StoryPage({ params }: { params: { slug: string } }) {
                   fontFamily: 'var(--font-cormorant)',
                   fontSize: '1.5rem',
                   fontWeight: 400,
-                  color: '#2A2420',
+                  color: 'var(--dp)',
                   marginBottom: 8,
                 }}
               >
@@ -303,14 +303,14 @@ export default function StoryPage({ params }: { params: { slug: string } }) {
 
       {/* EMBEDDED PRODUCT CARD */}
       {product && (
-        <section style={{ background: '#ACAB9E' }} className="py-0">
+        <section style={{ background: 'var(--bg-dark)' }} className="py-0">
           <div className="max-w-[780px] mx-auto px-6 md:px-12 py-12">
             <div
               className="grid grid-cols-1 md:grid-cols-2 gap-8"
-              style={{ background: '#ACAB9E' }}
+              style={{ background: 'var(--bg-dark)' }}
             >
-              <div className="relative" style={{ aspectRatio: '4/3', background: '#2A2420' }}>
-                <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 3, background: '#896A58', opacity: 0.4 }} />
+              <div className="relative" style={{ aspectRatio: '4/3', background: 'var(--dp)' }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 3, background: 'var(--taupe)', opacity: 0.4 }} />
               </div>
               <div className="flex flex-col gap-4">
                 <div
@@ -320,7 +320,7 @@ export default function StoryPage({ params }: { params: { slug: string } }) {
                     fontWeight: 600,
                     letterSpacing: '0.2em',
                     textTransform: 'uppercase',
-                    color: '#896A58',
+                    color: 'var(--taupe)',
                   }}
                 >
                   From This Story
@@ -330,15 +330,15 @@ export default function StoryPage({ params }: { params: { slug: string } }) {
                     fontFamily: 'var(--font-cormorant)',
                     fontSize: '1.4rem',
                     fontWeight: 300,
-                    color: '#2A2420',
+                    color: 'var(--dp)',
                   }}
                 >
                   {product.title}
                 </h3>
-                <div style={{ fontFamily: 'var(--font-cormorant)', fontSize: '1.4rem', color: '#2A2420' }}>
+                <div style={{ fontFamily: 'var(--font-cormorant)', fontSize: '1.4rem', color: 'var(--dp)' }}>
                   {product.price}
                 </div>
-                <div style={{ borderLeft: '2px solid #567257', paddingLeft: 12 }}>
+                <div style={{ borderLeft: '2px solid var(--green)', paddingLeft: 12 }}>
                   <p style={{ fontFamily: 'var(--font-josefin)', fontSize: 11, color: 'rgba(42,36,32,0.75)' }}>
                     {product.giving_back}
                   </p>
@@ -368,7 +368,7 @@ export default function StoryPage({ params }: { params: { slug: string } }) {
 
       {/* RELATED STORIES */}
       {related.length > 0 && (
-        <section style={{ background: '#D9D8D5' }} className="py-16">
+        <section style={{ background: 'var(--bg)' }} className="py-16">
           <div className="max-w-[780px] mx-auto px-6 md:px-12">
             <DecoDoubleRule />
             <div
@@ -378,7 +378,7 @@ export default function StoryPage({ params }: { params: { slug: string } }) {
                 fontWeight: 600,
                 letterSpacing: '0.2em',
                 textTransform: 'uppercase',
-                color: '#896A58',
+                color: 'var(--taupe)',
                 marginBottom: 24,
               }}
             >
@@ -397,14 +397,14 @@ export default function StoryPage({ params }: { params: { slug: string } }) {
                   >
                     <div
                       className="relative"
-                      style={{ minHeight: 120, background: '#2A2420' }}
+                      style={{ minHeight: 120, background: 'var(--dp)' }}
                     >
                       <div
                         style={{
                           position: 'absolute',
                           top: 0, left: 0, bottom: 0,
                           width: 3,
-                          background: '#567257',
+                          background: 'var(--green)',
                           opacity: 0.4,
                         }}
                       />
@@ -417,7 +417,7 @@ export default function StoryPage({ params }: { params: { slug: string } }) {
                           fontWeight: 600,
                           letterSpacing: '0.16em',
                           textTransform: 'uppercase',
-                          color: '#896A58',
+                          color: 'var(--taupe)',
                           marginBottom: 6,
                         }}
                       >
@@ -428,7 +428,7 @@ export default function StoryPage({ params }: { params: { slug: string } }) {
                           fontFamily: 'var(--font-cormorant)',
                           fontWeight: 300,
                           fontSize: '1.15rem',
-                          color: '#2A2420',
+                          color: 'var(--dp)',
                           lineHeight: 1.2,
                           marginBottom: 8,
                         }}

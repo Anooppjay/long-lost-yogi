@@ -25,7 +25,7 @@ export default function AdminPage() {
     return (
       <main
         style={{
-          background: '#D9D8D5',
+          background: 'var(--bg)',
           minHeight: '80vh',
           display: 'flex',
           alignItems: 'center',
@@ -39,7 +39,7 @@ export default function AdminPage() {
               fontFamily: 'var(--font-cormorant)',
               fontWeight: 300,
               fontSize: '2rem',
-              color: '#2A2420',
+              color: 'var(--dp)',
               marginBottom: 24,
             }}
           >
@@ -55,24 +55,24 @@ export default function AdminPage() {
                 width: '100%',
                 background: 'transparent',
                 border: 'none',
-                borderBottom: `1px solid ${pwError ? '#896A58' : 'rgba(42,36,32,0.22)'}`,
+                borderBottom: `1px solid ${pwError ? 'var(--taupe)' : 'rgba(42,36,32,0.22)'}`,
                 padding: '10px 0',
                 fontFamily: 'var(--font-josefin)',
                 fontSize: 13,
-                color: '#2A2420',
+                color: 'var(--dp)',
                 outline: 'none',
               }}
             />
             {pwError && (
-              <p style={{ fontFamily: 'var(--font-josefin)', fontSize: 11, color: '#896A58', marginTop: -12 }}>
+              <p style={{ fontFamily: 'var(--font-josefin)', fontSize: 11, color: 'var(--taupe)', marginTop: -12 }}>
                 Incorrect password.
               </p>
             )}
             <button
               type="submit"
               style={{
-                background: '#567257',
-                color: '#D9D8D5',
+                background: 'var(--green)',
+                color: 'var(--bg)',
                 fontFamily: 'var(--font-josefin)',
                 fontSize: 11,
                 fontWeight: 600,
@@ -92,8 +92,8 @@ export default function AdminPage() {
   }
 
   return (
-    <main style={{ background: '#D9D8D5', minHeight: '100vh' }}>
-      <section style={{ background: '#2A2420', padding: '3rem 0 2.5rem' }}>
+    <main style={{ background: 'var(--bg)', minHeight: '100vh' }}>
+      <section style={{ background: 'var(--dp)', padding: '3rem 0 2.5rem' }}>
         <div className="max-w-6xl mx-auto px-6 md:px-12">
           <DecoDoubleRule />
           <h1
@@ -101,7 +101,7 @@ export default function AdminPage() {
               fontFamily: 'var(--font-cormorant)',
               fontWeight: 300,
               fontSize: 'clamp(1.5rem,3vw,2.2rem)',
-              color: '#D9D8D5',
+              color: 'var(--bg)',
             }}
           >
             Admin Panel
@@ -112,7 +112,7 @@ export default function AdminPage() {
       {/* TABS */}
       <div
         style={{
-          background: '#D9D8D5',
+          background: 'var(--bg)',
           borderBottom: '1px solid rgba(42,36,32,0.12)',
           position: 'sticky',
           top: 0,
@@ -134,8 +134,8 @@ export default function AdminPage() {
                 background: 'transparent',
                 border: 'none',
                 cursor: 'pointer',
-                color: activeTab === tab ? '#2A2420' : 'rgba(42,36,32,0.38)',
-                borderBottom: activeTab === tab ? '2px solid #567257' : '2px solid transparent',
+                color: activeTab === tab ? 'var(--dp)' : 'rgba(42,36,32,0.38)',
+                borderBottom: activeTab === tab ? '2px solid var(--green)' : '2px solid transparent',
                 whiteSpace: 'nowrap',
               }}
             >
@@ -217,7 +217,7 @@ function GivingBackTab() {
             fontFamily: 'var(--font-josefin)',
             fontSize: 9, fontWeight: 600,
             letterSpacing: '0.18em', textTransform: 'uppercase',
-            color: '#896A58',
+            color: 'var(--taupe)',
           }}
         >
           New Total (AUD)
@@ -236,17 +236,17 @@ function GivingBackTab() {
             padding: '10px 0',
             fontFamily: 'var(--font-josefin)',
             fontSize: 13,
-            color: '#2A2420',
+            color: 'var(--dp)',
             outline: 'none',
           }}
         />
-        {error && <p style={{ fontFamily: 'var(--font-josefin)', fontSize: 11, color: '#896A58' }}>{error}</p>}
+        {error && <p style={{ fontFamily: 'var(--font-josefin)', fontSize: 11, color: 'var(--taupe)' }}>{error}</p>}
         <button
           onClick={handleSave}
           disabled={saving}
           style={{
-            background: saved ? '#567257' : '#2A2420',
-            color: '#D9D8D5',
+            background: saved ? 'var(--green)' : 'var(--dp)',
+            color: 'var(--bg)',
             fontFamily: 'var(--font-josefin)',
             fontSize: 11, fontWeight: 600,
             letterSpacing: '0.16em', textTransform: 'uppercase',
@@ -295,7 +295,7 @@ function ContentTab() {
     padding: '10px 0',
     fontFamily: 'var(--font-josefin)',
     fontSize: 13,
-    color: '#2A2420',
+    color: 'var(--dp)',
     outline: 'none',
     width: '100%',
   }
@@ -304,7 +304,7 @@ function ContentTab() {
     fontFamily: 'var(--font-josefin)',
     fontSize: 9, fontWeight: 600,
     letterSpacing: '0.18em', textTransform: 'uppercase',
-    color: '#896A58', display: 'block', marginBottom: 6,
+    color: 'var(--taupe)', display: 'block', marginBottom: 6,
   }
 
   return (
@@ -343,8 +343,8 @@ function ContentTab() {
           onClick={handleSave}
           disabled={saving}
           style={{
-            background: saved ? '#567257' : '#2A2420',
-            color: '#D9D8D5',
+            background: saved ? 'var(--green)' : 'var(--dp)',
+            color: 'var(--bg)',
             fontFamily: 'var(--font-josefin)',
             fontSize: 11, fontWeight: 600,
             letterSpacing: '0.16em', textTransform: 'uppercase',
@@ -396,11 +396,11 @@ function ImagesTab() {
     background: 'transparent', border: 'none',
     borderBottom: '1px solid rgba(42,36,32,0.22)',
     padding: '10px 0',
-    fontFamily: 'var(--font-josefin)', fontSize: 13, color: '#2A2420', outline: 'none', width: '100%',
+    fontFamily: 'var(--font-josefin)', fontSize: 13, color: 'var(--dp)', outline: 'none', width: '100%',
   }
   const labelStyle: React.CSSProperties = {
     fontFamily: 'var(--font-josefin)', fontSize: 9, fontWeight: 600,
-    letterSpacing: '0.18em', textTransform: 'uppercase', color: '#896A58', display: 'block', marginBottom: 6,
+    letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--taupe)', display: 'block', marginBottom: 6,
   }
 
   return (
@@ -435,7 +435,7 @@ function ImagesTab() {
           onDrop={handleDrop}
           onClick={() => fileRef.current?.click()}
           style={{
-            border: `1px dashed ${dragOver ? '#567257' : 'rgba(42,36,32,0.22)'}`,
+            border: `1px dashed ${dragOver ? 'var(--green)' : 'rgba(42,36,32,0.22)'}`,
             background: dragOver ? 'rgba(86,114,87,0.04)' : 'transparent',
             padding: '3rem 2rem',
             textAlign: 'center',
@@ -462,8 +462,8 @@ function ImagesTab() {
         />
 
         {uploaded && (
-          <div style={{ borderLeft: '2px solid #567257', paddingLeft: 12 }}>
-            <p style={{ fontFamily: 'var(--font-josefin)', fontSize: 11, color: '#567257' }}>
+          <div style={{ borderLeft: '2px solid var(--green)', paddingLeft: 12 }}>
+            <p style={{ fontFamily: 'var(--font-josefin)', fontSize: 11, color: 'var(--green)' }}>
               Uploaded: {uploaded}
             </p>
           </div>
@@ -482,7 +482,7 @@ function SectionHeader({ eyebrow, heading }: { eyebrow: string; heading: string 
           fontFamily: 'var(--font-josefin)',
           fontSize: 9, fontWeight: 600,
           letterSpacing: '0.2em', textTransform: 'uppercase',
-          color: '#896A58', marginBottom: 8,
+          color: 'var(--taupe)', marginBottom: 8,
         }}
       >
         {eyebrow}
@@ -492,7 +492,7 @@ function SectionHeader({ eyebrow, heading }: { eyebrow: string; heading: string 
           fontFamily: 'var(--font-cormorant)',
           fontWeight: 300,
           fontSize: 'clamp(1.3rem,2.2vw,1.8rem)',
-          color: '#2A2420',
+          color: 'var(--dp)',
         }}
       >
         {heading}

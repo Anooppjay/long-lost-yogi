@@ -1,4 +1,4 @@
-﻿import { getAllProducts, getAllStories, getGivingBackTotal } from '@/lib/content'
+import { getAllProducts, getAllStories, getGivingBackTotal } from '@/lib/content'
 import GivingBackCounter from '@/components/GivingBackCounter'
 import FeaturedListings from '@/components/FeaturedListings'
 import DecoDoubleRule from '@/components/DecoDoubleRule'
@@ -15,14 +15,14 @@ export default function HomePage() {
       {/* HERO */}
       <section
         className="relative overflow-hidden"
-        style={{ background: '#2A2420', minHeight: '88vh', display: 'flex', alignItems: 'center' }}
+        style={{ background: 'var(--dp)', minHeight: '88vh', display: 'flex', alignItems: 'center' }}
       >
         <div
           style={{
             position: 'absolute',
             top: 0, right: 0, bottom: 0,
             width: '45%',
-            background: '#2A2420',
+            background: 'var(--dp)',
             opacity: 0.5,
           }}
         />
@@ -32,7 +32,7 @@ export default function HomePage() {
             top: 0, bottom: 0,
             right: '36%',
             width: '0.5px',
-            background: '#567257',
+            background: 'var(--green)',
             opacity: 0.15,
           }}
         />
@@ -58,7 +58,7 @@ export default function HomePage() {
               fontWeight: 600,
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
-              color: '#ACAB9E',
+              color: 'var(--bg-dark)',
               opacity: 0.75,
               marginBottom: 18,
             }}
@@ -70,7 +70,7 @@ export default function HomePage() {
               fontFamily: 'var(--font-cormorant)',
               fontWeight: 300,
               fontSize: 'clamp(2.2rem,5.5vw,4rem)',
-              color: '#D9D8D5',
+              color: 'var(--bg)',
               lineHeight: 1.15,
               maxWidth: 640,
               marginBottom: 20,
@@ -95,8 +95,8 @@ export default function HomePage() {
             <Link
               href="/shop"
               style={{
-                background: '#567257',
-                color: '#D9D8D5',
+                background: 'var(--green)',
+                color: 'var(--bg)',
                 fontFamily: 'var(--font-josefin)',
                 fontSize: 11,
                 fontWeight: 600,
@@ -138,7 +138,7 @@ export default function HomePage() {
                   fontWeight: 600,
                   letterSpacing: '0.18em',
                   textTransform: 'uppercase',
-                  color: i % 2 === 0 ? '#ACAB9E' : '#896A58',
+                  color: i % 2 === 0 ? 'var(--bg-dark)' : 'var(--taupe)',
                   opacity: 0.55,
                 }}
               >
@@ -153,19 +153,19 @@ export default function HomePage() {
       <GivingBackCounter total={givingBack.total} currency={givingBack.currency} />
 
       {/* ORIGIN TEASER */}
-      <section style={{ background: '#D9D8D5' }} className="py-20 md:py-28">
+      <section style={{ background: 'var(--bg)' }} className="py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-[5fr_7fr] gap-10 md:gap-16 items-center">
             <div
               className="relative overflow-hidden"
-              style={{ aspectRatio: '4/5', background: '#2A2420' }}
+              style={{ aspectRatio: '4/5', background: 'var(--dp)' }}
             >
               <div
                 style={{
                   position: 'absolute',
                   top: 0, left: 0, bottom: 0,
                   width: 4,
-                  background: '#896A58',
+                  background: 'var(--taupe)',
                   opacity: 0.45,
                 }}
               />
@@ -180,7 +180,7 @@ export default function HomePage() {
                   fontWeight: 600,
                   letterSpacing: '0.2em',
                   textTransform: 'uppercase',
-                  color: '#896A58',
+                  color: 'var(--taupe)',
                   marginBottom: 12,
                 }}
               >
@@ -191,7 +191,7 @@ export default function HomePage() {
                   fontFamily: 'var(--font-cormorant)',
                   fontWeight: 300,
                   fontSize: 'clamp(1.8rem,3.5vw,2.8rem)',
-                  color: '#2A2420',
+                  color: 'var(--dp)',
                   lineHeight: 1.15,
                   marginBottom: 20,
                 }}
@@ -211,7 +211,7 @@ export default function HomePage() {
                 Nepal. Goa. Kashmir. Every place had them. People making the same things the same way for generations. Not for export. Because it was in them.
               </p>
               <blockquote
-                style={{ borderLeft: '2px solid #896A58', paddingLeft: 16, marginBottom: 24 }}
+                style={{ borderLeft: '2px solid var(--taupe)', paddingLeft: 16, marginBottom: 24 }}
               >
                 <p
                   style={{
@@ -245,7 +245,7 @@ export default function HomePage() {
       <FeaturedListings products={products} />
 
       {/* STORYBOARD PREVIEW */}
-      <section style={{ background: '#ACAB9E' }} className="py-20">
+      <section style={{ background: 'var(--bg-dark)' }} className="py-20">
         <div className="max-w-6xl mx-auto px-6 md:px-12">
           <div className="mb-10">
             <DecoDoubleRule />
@@ -256,7 +256,7 @@ export default function HomePage() {
                 fontWeight: 600,
                 letterSpacing: '0.2em',
                 textTransform: 'uppercase',
-                color: '#567257',
+                color: 'var(--green)',
                 marginBottom: 10,
               }}
             >
@@ -267,7 +267,7 @@ export default function HomePage() {
                 fontFamily: 'var(--font-cormorant)',
                 fontWeight: 300,
                 fontSize: 'clamp(1.6rem,3vw,2.4rem)',
-                color: '#2A2420',
+                color: 'var(--dp)',
               }}
             >
               Every piece has a before.
@@ -287,19 +287,19 @@ export default function HomePage() {
                 >
                   <div
                     className="relative overflow-hidden"
-                    style={{ minHeight: 220, background: '#2A2420' }}
+                    style={{ minHeight: 220, background: 'var(--dp)' }}
                   >
                     <div
                       style={{
                         position: 'absolute',
                         top: 0, left: 0, bottom: 0,
                         width: 4,
-                        background: '#567257',
+                        background: 'var(--green)',
                         opacity: 0.45,
                       }}
                     />
                   </div>
-                  <div style={{ background: '#D9D8D5', padding: '1.5rem 2rem' }}>
+                  <div style={{ background: 'var(--bg)', padding: '1.5rem 2rem' }}>
                     <div
                       style={{
                         fontFamily: 'var(--font-josefin)',
@@ -307,7 +307,7 @@ export default function HomePage() {
                         fontWeight: 600,
                         letterSpacing: '0.2em',
                         textTransform: 'uppercase',
-                        color: '#ACAB9E',
+                        color: 'var(--bg-dark)',
                         marginBottom: 10,
                       }}
                     >
@@ -318,7 +318,7 @@ export default function HomePage() {
                         fontFamily: 'var(--font-cormorant)',
                         fontWeight: 300,
                         fontSize: 'clamp(1.2rem,2vw,1.6rem)',
-                        color: '#2A2420',
+                        color: 'var(--dp)',
                         marginBottom: 10,
                         lineHeight: 1.2,
                       }}
@@ -359,8 +359,8 @@ export default function HomePage() {
             <Link
               href="/storyboard"
               style={{
-                background: '#567257',
-                color: '#D9D8D5',
+                background: 'var(--green)',
+                color: 'var(--bg)',
                 fontFamily: 'var(--font-josefin)',
                 fontSize: 11,
                 fontWeight: 600,
@@ -378,10 +378,10 @@ export default function HomePage() {
       </section>
 
       {/* CURATOR CTA */}
-      <section className="relative overflow-hidden" style={{ background: '#567257' }}>
+      <section className="relative overflow-hidden" style={{ background: 'var(--green)' }}>
         <div className="mx-6 md:mx-12 pt-10">
-          <div style={{ height: 2, background: '#ACAB9E', opacity: 0.4 }} />
-          <div style={{ height: 1, background: '#896A58', opacity: 0.3, marginTop: 3 }} />
+          <div style={{ height: 2, background: 'var(--bg-dark)', opacity: 0.4 }} />
+          <div style={{ height: 1, background: 'var(--taupe)', opacity: 0.3, marginTop: 3 }} />
         </div>
 
         <div style={{ position: 'absolute', inset: '1.5rem' }}>
@@ -407,7 +407,7 @@ export default function HomePage() {
               fontFamily: 'var(--font-cormorant)',
               fontWeight: 300,
               fontSize: 'clamp(1.8rem,3.5vw,2.8rem)',
-              color: '#D9D8D5',
+              color: 'var(--bg)',
               lineHeight: 1.2,
               maxWidth: 600,
               margin: '0 auto 16px',
@@ -433,8 +433,8 @@ export default function HomePage() {
             <Link
               href="/curators/apply"
               style={{
-                background: '#2A2420',
-                color: '#D9D8D5',
+                background: 'var(--dp)',
+                color: 'var(--bg)',
                 fontFamily: 'var(--font-josefin)',
                 fontSize: 11,
                 fontWeight: 600,
@@ -469,8 +469,8 @@ export default function HomePage() {
         </div>
 
         <div className="mx-6 md:mx-12 pb-10">
-          <div style={{ height: 2, background: '#ACAB9E', opacity: 0.4 }} />
-          <div style={{ height: 1, background: '#896A58', opacity: 0.3, marginTop: 3 }} />
+          <div style={{ height: 2, background: 'var(--bg-dark)', opacity: 0.4 }} />
+          <div style={{ height: 1, background: 'var(--taupe)', opacity: 0.3, marginTop: 3 }} />
         </div>
       </section>
     </main>

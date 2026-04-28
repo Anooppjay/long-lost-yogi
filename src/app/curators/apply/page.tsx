@@ -46,7 +46,7 @@ export default function CuratorApplyPage() {
     padding: '10px 0',
     fontFamily: 'var(--font-josefin)',
     fontSize: 13,
-    color: '#2A2420',
+    color: 'var(--dp)',
     outline: 'none',
   }
 
@@ -56,17 +56,17 @@ export default function CuratorApplyPage() {
     fontWeight: 600,
     letterSpacing: '0.18em',
     textTransform: 'uppercase',
-    color: '#896A58',
+    color: 'var(--taupe)',
     display: 'block',
     marginBottom: 6,
   }
 
   return (
-    <main style={{ background: '#D9D8D5' }}>
-      <section style={{ background: '#2A2420', padding: '5rem 0 4rem' }}>
+    <main style={{ background: 'var(--bg)' }}>
+      <section style={{ background: 'var(--dp)', padding: '5rem 0 4rem' }}>
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0 }}>
-          <div style={{ height: 2, background: '#567257' }} />
-          <div style={{ height: 1, background: '#896A58', marginTop: 3 }} />
+          <div style={{ height: 2, background: 'var(--green)' }} />
+          <div style={{ height: 1, background: 'var(--taupe)', marginTop: 3 }} />
         </div>
         <div className="max-w-3xl mx-auto px-6 md:px-12">
           <DecoDoubleRule />
@@ -75,7 +75,7 @@ export default function CuratorApplyPage() {
               fontFamily: 'var(--font-cormorant)',
               fontWeight: 300,
               fontSize: 'clamp(1.8rem,4vw,3rem)',
-              color: '#D9D8D5',
+              color: 'var(--bg)',
               lineHeight: 1.2,
               marginBottom: 14,
             }}
@@ -106,7 +106,7 @@ export default function CuratorApplyPage() {
                   fontFamily: 'var(--font-cormorant)',
                   fontWeight: 300,
                   fontSize: '2rem',
-                  color: '#2A2420',
+                  color: 'var(--dp)',
                   marginBottom: 16,
                 }}
               >
@@ -226,7 +226,7 @@ export default function CuratorApplyPage() {
                   style={{
                     fontFamily: 'var(--font-josefin)',
                     fontSize: 11,
-                    color: '#896A58',
+                    color: 'var(--taupe)',
                   }}
                 >
                   {error}
@@ -237,8 +237,8 @@ export default function CuratorApplyPage() {
                 type="submit"
                 disabled={loading}
                 style={{
-                  background: loading ? 'rgba(86,114,87,0.5)' : '#567257',
-                  color: '#D9D8D5',
+                  background: loading ? 'rgba(86,114,87,0.5)' : 'var(--green)',
+                  color: 'var(--bg)',
                   fontFamily: 'var(--font-josefin)',
                   fontSize: 11,
                   fontWeight: 600,

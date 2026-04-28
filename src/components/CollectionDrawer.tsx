@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useEffect } from 'react'
 import type { Product } from '@/lib/content'
@@ -42,7 +42,7 @@ export default function CollectionDrawer({ product, onClose }: CollectionDrawerP
         style={{
           width: '100%',
           maxWidth: 860,
-          background: '#D9D8D5',
+          background: 'var(--bg)',
           animation: 'drawerSlideIn 0.28s cubic-bezier(0.16,1,0.3,1) forwards',
         }}
       >
@@ -56,7 +56,7 @@ export default function CollectionDrawer({ product, onClose }: CollectionDrawerP
         {/* Sticky header */}
         <div
           className="sticky top-0 z-10 flex items-center justify-between px-6 py-4"
-          style={{ background: '#D9D8D5', borderBottom: '1px solid rgba(42,36,32,0.12)' }}
+          style={{ background: 'var(--bg)', borderBottom: '1px solid rgba(42,36,32,0.12)' }}
         >
           <DecoDoubleRule className="mb-0" />
           <button
@@ -70,7 +70,7 @@ export default function CollectionDrawer({ product, onClose }: CollectionDrawerP
               alignItems: 'center',
               justifyContent: 'center',
               cursor: 'pointer',
-              color: '#2A2420',
+              color: 'var(--dp)',
             }}
           >
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -86,15 +86,15 @@ export default function CollectionDrawer({ product, onClose }: CollectionDrawerP
           <div className="flex flex-col gap-[1.5px]">
             <div
               className="relative overflow-hidden"
-              style={{ aspectRatio: '3/4', background: '#2A2420' }}
+              style={{ aspectRatio: '3/4', background: 'var(--dp)' }}
             >
-              <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 3, background: '#896A58', opacity: 0.4 }} />
+              <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 3, background: 'var(--taupe)', opacity: 0.4 }} />
             </div>
             <div
               className="relative overflow-hidden"
-              style={{ aspectRatio: '4/3', background: '#2A2420' }}
+              style={{ aspectRatio: '4/3', background: 'var(--dp)' }}
             >
-              <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 3, background: '#896A58', opacity: 0.4 }} />
+              <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 3, background: 'var(--taupe)', opacity: 0.4 }} />
             </div>
           </div>
 
@@ -108,7 +108,7 @@ export default function CollectionDrawer({ product, onClose }: CollectionDrawerP
                   fontWeight: 600,
                   letterSpacing: '0.16em',
                   textTransform: 'uppercase',
-                  color: '#567257',
+                  color: 'var(--green)',
                   border: '1px solid rgba(86,114,87,0.5)',
                   padding: '3px 8px',
                 }}
@@ -122,7 +122,7 @@ export default function CollectionDrawer({ product, onClose }: CollectionDrawerP
                   fontWeight: 600,
                   letterSpacing: '0.16em',
                   textTransform: 'uppercase',
-                  color: '#896A58',
+                  color: 'var(--taupe)',
                   border: '1px solid rgba(137,106,88,0.4)',
                   padding: '3px 8px',
                 }}
@@ -136,7 +136,7 @@ export default function CollectionDrawer({ product, onClose }: CollectionDrawerP
                 fontFamily: 'var(--font-cormorant)',
                 fontSize: 'clamp(1.4rem,2.5vw,2rem)',
                 fontWeight: 300,
-                color: '#2A2420',
+                color: 'var(--dp)',
                 lineHeight: 1.2,
               }}
             >
@@ -148,7 +148,7 @@ export default function CollectionDrawer({ product, onClose }: CollectionDrawerP
                 fontFamily: 'var(--font-cormorant)',
                 fontSize: '1.65rem',
                 fontWeight: 400,
-                color: '#2A2420',
+                color: 'var(--dp)',
               }}
             >
               {product.price}
@@ -159,36 +159,36 @@ export default function CollectionDrawer({ product, onClose }: CollectionDrawerP
                 style={{
                   width: 46,
                   height: 46,
-                  background: '#ACAB9E',
+                  background: 'var(--bg-dark)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  borderBottom: '2px solid #896A58',
+                  borderBottom: '2px solid var(--taupe)',
                   flexShrink: 0,
                 }}
               >
-                <span style={{ fontFamily: 'var(--font-cormorant)', fontSize: 15, color: '#2A2420' }}>
+                <span style={{ fontFamily: 'var(--font-cormorant)', fontSize: 15, color: 'var(--dp)' }}>
                   {product.makerInitials}
                 </span>
               </div>
               <div>
-                <div style={{ fontFamily: 'var(--font-cormorant)', fontSize: 15, color: '#2A2420' }}>
+                <div style={{ fontFamily: 'var(--font-cormorant)', fontSize: 15, color: 'var(--dp)' }}>
                   {product.maker}
                 </div>
-                <div style={{ fontFamily: 'var(--font-josefin)', fontSize: 9, color: '#896A58', opacity: 0.7 }}>
+                <div style={{ fontFamily: 'var(--font-josefin)', fontSize: 9, color: 'var(--taupe)', opacity: 0.7 }}>
                   {product.makerLocation}
                 </div>
               </div>
             </div>
 
-            <div style={{ background: '#ACAB9E', padding: '10px 14px' }}>
-              <p style={{ fontFamily: 'var(--font-josefin)', fontSize: 11, color: '#2A2420', opacity: 0.8 }}>
+            <div style={{ background: 'var(--bg-dark)', padding: '10px 14px' }}>
+              <p style={{ fontFamily: 'var(--font-josefin)', fontSize: 11, color: 'var(--dp)', opacity: 0.8 }}>
                 {product.shipping}
               </p>
             </div>
 
-            <div style={{ borderLeft: '2px solid #567257', paddingLeft: 12 }}>
-              <p style={{ fontFamily: 'var(--font-josefin)', fontSize: 11, color: '#2A2420', opacity: 0.8 }}>
+            <div style={{ borderLeft: '2px solid var(--green)', paddingLeft: 12 }}>
+              <p style={{ fontFamily: 'var(--font-josefin)', fontSize: 11, color: 'var(--dp)', opacity: 0.8 }}>
                 {product.giving_back}
               </p>
             </div>
@@ -226,7 +226,7 @@ export default function CollectionDrawer({ product, onClose }: CollectionDrawerP
               fontWeight: 600,
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
-              color: '#896A58',
+              color: 'var(--taupe)',
               marginBottom: 8,
             }}
           >
@@ -237,7 +237,7 @@ export default function CollectionDrawer({ product, onClose }: CollectionDrawerP
               fontFamily: 'var(--font-cormorant)',
               fontSize: 'clamp(1.2rem,2vw,1.6rem)',
               fontWeight: 300,
-              color: '#2A2420',
+              color: 'var(--dp)',
               marginBottom: 24,
             }}
           >
@@ -251,7 +251,7 @@ export default function CollectionDrawer({ product, onClose }: CollectionDrawerP
                   fontFamily: 'var(--font-cormorant)',
                   fontStyle: 'italic',
                   fontSize: '1.1rem',
-                  color: '#2A2420',
+                  color: 'var(--dp)',
                   lineHeight: 1.7,
                   marginBottom: 16,
                 }}
@@ -274,16 +274,16 @@ export default function CollectionDrawer({ product, onClose }: CollectionDrawerP
               <div
                 style={{
                   aspectRatio: '4/3',
-                  background: '#2A2420',
+                  background: 'var(--dp)',
                   position: 'relative',
                   marginBottom: 14,
                 }}
               >
-                <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 3, background: '#896A58', opacity: 0.4 }} />
+                <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 3, background: 'var(--taupe)', opacity: 0.4 }} />
               </div>
               <div
                 style={{
-                  background: '#ACAB9E',
+                  background: 'var(--bg-dark)',
                   padding: '12px 16px',
                   display: 'flex',
                   alignItems: 'center',
@@ -295,19 +295,19 @@ export default function CollectionDrawer({ product, onClose }: CollectionDrawerP
                     width: 34,
                     height: 34,
                     borderRadius: '50%',
-                    background: '#896A58',
+                    background: 'var(--taupe)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
                     flexShrink: 0,
                   }}
                 >
-                  <span style={{ fontFamily: 'var(--font-cormorant)', fontSize: 12, color: '#D9D8D5' }}>
+                  <span style={{ fontFamily: 'var(--font-cormorant)', fontSize: 12, color: 'var(--bg)' }}>
                     {product.makerInitials}
                   </span>
                 </div>
                 <div>
-                  <div style={{ fontFamily: 'var(--font-josefin)', fontSize: 10, fontWeight: 600, color: '#2A2420' }}>
+                  <div style={{ fontFamily: 'var(--font-josefin)', fontSize: 10, fontWeight: 600, color: 'var(--dp)' }}>
                     {product.maker}
                   </div>
                   <div style={{ fontFamily: 'var(--font-josefin)', fontSize: 9, color: 'rgba(42,36,32,0.6)' }}>

@@ -1,4 +1,4 @@
-﻿import Link from 'next/link'
+import Link from 'next/link'
 import { getGivingBackTotal } from '@/lib/content'
 
 export default function Footer() {
@@ -7,11 +7,11 @@ export default function Footer() {
   return (
     <footer>
       <div>
-        <div style={{ height: 2, background: '#567257' }} />
-        <div style={{ height: 1, background: '#ACAB9E' }} />
+        <div style={{ height: 2, background: 'var(--green)' }} />
+        <div style={{ height: 1, background: 'var(--bg-dark)' }} />
       </div>
 
-      <div style={{ background: '#2A2420' }} className="px-6 md:px-12 py-8">
+      <div style={{ background: 'var(--dp)' }} className="px-6 md:px-12 py-8">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div>
             <div
@@ -21,7 +21,7 @@ export default function Footer() {
                 fontWeight: 600,
                 letterSpacing: '0.2em',
                 textTransform: 'uppercase',
-                color: '#567257',
+                color: 'var(--green)',
                 marginBottom: 8,
               }}
             >
@@ -32,7 +32,7 @@ export default function Footer() {
                 fontFamily: 'var(--font-cormorant)',
                 fontSize: 'clamp(1.4rem,3vw,2rem)',
                 fontWeight: 300,
-                color: '#D9D8D5',
+                color: 'var(--bg)',
               }}
             >
               ${givingBack.total.toLocaleString()} {givingBack.currency} given back so far
@@ -46,7 +46,7 @@ export default function Footer() {
               fontWeight: 600,
               letterSpacing: '0.16em',
               textTransform: 'uppercase',
-              color: '#567257',
+              color: 'var(--green)',
               textDecoration: 'none',
             }}
           >
@@ -56,7 +56,7 @@ export default function Footer() {
       </div>
 
       <div
-        style={{ background: '#2A2420', borderTop: '1px solid rgba(217,216,213,0.05)' }}
+        style={{ background: 'var(--dp)', borderTop: '1px solid rgba(217,216,213,0.05)' }}
         className="px-6 md:px-12 py-12"
       >
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
@@ -66,7 +66,7 @@ export default function Footer() {
                 fontFamily: 'var(--font-cormorant)',
                 fontSize: 20,
                 fontWeight: 400,
-                color: '#D9D8D5',
+                color: 'var(--bg)',
                 marginBottom: 4,
                 lineHeight: 1.1,
               }}
@@ -80,7 +80,7 @@ export default function Footer() {
                 fontWeight: 600,
                 letterSpacing: '0.24em',
                 textTransform: 'uppercase',
-                color: '#896A58',
+                color: 'var(--taupe)',
                 marginBottom: 16,
               }}
             >
@@ -97,8 +97,8 @@ export default function Footer() {
               Curating the long-lost art of knowing where your things come from.
             </p>
             <div className="mt-6" style={{ width: 28 }}>
-              <div style={{ height: 2, background: '#ACAB9E', opacity: 0.8, marginBottom: 3 }} />
-              <div style={{ height: 1, background: '#896A58', opacity: 0.45 }} />
+              <div style={{ height: 2, background: 'var(--bg-dark)', opacity: 0.8, marginBottom: 3 }} />
+              <div style={{ height: 1, background: 'var(--taupe)', opacity: 0.45 }} />
             </div>
           </div>
 
@@ -110,7 +110,7 @@ export default function Footer() {
                 fontWeight: 600,
                 letterSpacing: '0.2em',
                 textTransform: 'uppercase',
-                color: '#896A58',
+                color: 'var(--taupe)',
                 marginBottom: 20,
               }}
             >
@@ -147,7 +147,7 @@ export default function Footer() {
                 fontWeight: 600,
                 letterSpacing: '0.2em',
                 textTransform: 'uppercase',
-                color: '#896A58',
+                color: 'var(--taupe)',
                 marginBottom: 20,
               }}
             >
@@ -184,7 +184,7 @@ export default function Footer() {
                 fontWeight: 600,
                 letterSpacing: '0.2em',
                 textTransform: 'uppercase',
-                color: '#896A58',
+                color: 'var(--taupe)',
                 marginBottom: 20,
               }}
             >
@@ -210,7 +210,7 @@ export default function Footer() {
       </div>
 
       <div
-        style={{ background: '#2A2420', borderTop: '1px solid rgba(217,216,213,0.08)' }}
+        style={{ background: 'var(--dp)', borderTop: '1px solid rgba(217,216,213,0.08)' }}
         className="px-6 md:px-12 py-4"
       >
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">

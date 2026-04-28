@@ -23,7 +23,7 @@ export default function FullbleedInterrupt() {
           position: 'absolute',
           top: 0, left: 0, bottom: 0,
           width: 4,
-          background: '#896A58',
+          background: 'var(--taupe)',
           opacity: 0.4,
         }}
       />
@@ -32,7 +32,7 @@ export default function FullbleedInterrupt() {
           position: 'absolute',
           top: 0, right: 0, bottom: 0,
           width: 4,
-          background: '#567257',
+          background: 'var(--green)',
           opacity: 0.15,
         }}
       />

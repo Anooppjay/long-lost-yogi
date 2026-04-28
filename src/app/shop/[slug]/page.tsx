@@ -1,4 +1,4 @@
-﻿import { notFound } from 'next/navigation'
+import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { getAllProducts, getProductBySlug, getStoryBySlug } from '@/lib/content'
 import DecoDoubleRule from '@/components/DecoDoubleRule'
@@ -24,16 +24,16 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
   const story = product.story_slug ? getStoryBySlug(product.story_slug) : null
 
   return (
-    <main style={{ background: '#D9D8D5' }}>
+    <main style={{ background: 'var(--bg)' }}>
       <div className="max-w-6xl mx-auto px-6 md:px-12 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           {/* Images left */}
           <div className="flex flex-col gap-[1.5px]">
-            <div className="relative overflow-hidden" style={{ aspectRatio: '3/4', background: '#2A2420' }}>
-              <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 4, background: '#896A58', opacity: 0.4 }} />
+            <div className="relative overflow-hidden" style={{ aspectRatio: '3/4', background: 'var(--dp)' }}>
+              <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 4, background: 'var(--taupe)', opacity: 0.4 }} />
             </div>
-            <div className="relative overflow-hidden" style={{ aspectRatio: '4/3', background: '#2A2420' }}>
-              <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 4, background: '#896A58', opacity: 0.4 }} />
+            <div className="relative overflow-hidden" style={{ aspectRatio: '4/3', background: 'var(--dp)' }}>
+              <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 4, background: 'var(--taupe)', opacity: 0.4 }} />
             </div>
           </div>
 
@@ -46,7 +46,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                   fontSize: 9, fontWeight: 600,
                   letterSpacing: '0.16em',
                   textTransform: 'uppercase',
-                  color: '#567257',
+                  color: 'var(--green)',
                   border: '1px solid rgba(86,114,87,0.5)',
                   padding: '3px 8px',
                 }}
@@ -59,7 +59,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                   fontSize: 9, fontWeight: 600,
                   letterSpacing: '0.16em',
                   textTransform: 'uppercase',
-                  color: '#896A58',
+                  color: 'var(--taupe)',
                   border: '1px solid rgba(137,106,88,0.4)',
                   padding: '3px 8px',
                 }}
@@ -73,14 +73,14 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                 fontFamily: 'var(--font-cormorant)',
                 fontWeight: 300,
                 fontSize: 'clamp(1.6rem,3vw,2.4rem)',
-                color: '#2A2420',
+                color: 'var(--dp)',
                 lineHeight: 1.2,
               }}
             >
               {product.title}
             </h1>
 
-            <div style={{ fontFamily: 'var(--font-cormorant)', fontSize: '1.75rem', color: '#2A2420' }}>
+            <div style={{ fontFamily: 'var(--font-cormorant)', fontSize: '1.75rem', color: 'var(--dp)' }}>
               {product.price}
             </div>
 
@@ -88,34 +88,34 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
               <div
                 style={{
                   width: 46, height: 46,
-                  background: '#ACAB9E',
+                  background: 'var(--bg-dark)',
                   display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  borderBottom: '2px solid #896A58',
+                  borderBottom: '2px solid var(--taupe)',
                   flexShrink: 0,
                 }}
               >
-                <span style={{ fontFamily: 'var(--font-cormorant)', fontSize: 15, color: '#2A2420' }}>
+                <span style={{ fontFamily: 'var(--font-cormorant)', fontSize: 15, color: 'var(--dp)' }}>
                   {product.makerInitials}
                 </span>
               </div>
               <div>
-                <div style={{ fontFamily: 'var(--font-cormorant)', fontSize: 15, color: '#2A2420' }}>
+                <div style={{ fontFamily: 'var(--font-cormorant)', fontSize: 15, color: 'var(--dp)' }}>
                   {product.maker}
                 </div>
-                <div style={{ fontFamily: 'var(--font-josefin)', fontSize: 9, color: '#896A58', opacity: 0.7 }}>
+                <div style={{ fontFamily: 'var(--font-josefin)', fontSize: 9, color: 'var(--taupe)', opacity: 0.7 }}>
                   {product.makerLocation}
                 </div>
               </div>
             </div>
 
-            <div style={{ background: '#ACAB9E', padding: '10px 14px' }}>
-              <p style={{ fontFamily: 'var(--font-josefin)', fontSize: 11, color: '#2A2420', opacity: 0.8 }}>
+            <div style={{ background: 'var(--bg-dark)', padding: '10px 14px' }}>
+              <p style={{ fontFamily: 'var(--font-josefin)', fontSize: 11, color: 'var(--dp)', opacity: 0.8 }}>
                 {product.shipping}
               </p>
             </div>
 
-            <div style={{ borderLeft: '2px solid #567257', paddingLeft: 12 }}>
-              <p style={{ fontFamily: 'var(--font-josefin)', fontSize: 11, color: '#2A2420', opacity: 0.8 }}>
+            <div style={{ borderLeft: '2px solid var(--green)', paddingLeft: 12 }}>
+              <p style={{ fontFamily: 'var(--font-josefin)', fontSize: 11, color: 'var(--dp)', opacity: 0.8 }}>
                 {product.giving_back}
               </p>
             </div>
@@ -149,7 +149,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                   fontSize: 10, fontWeight: 600,
                   letterSpacing: '0.14em',
                   textTransform: 'uppercase',
-                  color: '#567257',
+                  color: 'var(--green)',
                   textDecoration: 'none',
                 }}
               >
@@ -161,7 +161,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
 
         {/* Story section */}
         {story && (
-          <section style={{ background: '#ACAB9E', margin: '4rem -1.5rem -3rem', padding: '3rem 1.5rem' }}>
+          <section style={{ background: 'var(--bg-dark)', margin: '4rem -1.5rem -3rem', padding: '3rem 1.5rem' }}>
             <div className="max-w-4xl mx-auto">
               <DecoDoubleRule />
               <div
@@ -170,7 +170,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                   fontSize: 8, fontWeight: 600,
                   letterSpacing: '0.2em',
                   textTransform: 'uppercase',
-                  color: '#896A58',
+                  color: 'var(--taupe)',
                   marginBottom: 10,
                 }}
               >
@@ -181,7 +181,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                   fontFamily: 'var(--font-cormorant)',
                   fontWeight: 300,
                   fontSize: 'clamp(1.4rem,2.5vw,2rem)',
-                  color: '#2A2420',
+                  color: 'var(--dp)',
                   marginBottom: 24,
                 }}
               >
@@ -193,14 +193,14 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                     fontFamily: 'var(--font-cormorant)',
                     fontStyle: 'italic',
                     fontSize: '1.1rem',
-                    color: '#2A2420',
+                    color: 'var(--dp)',
                     lineHeight: 1.7,
                   }}
                 >
                   {story.excerpt}
                 </p>
-                <div className="relative" style={{ aspectRatio: '4/3', background: '#2A2420' }}>
-                  <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 3, background: '#896A58', opacity: 0.4 }} />
+                <div className="relative" style={{ aspectRatio: '4/3', background: 'var(--dp)' }}>
+                  <div style={{ position: 'absolute', top: 0, left: 0, bottom: 0, width: 3, background: 'var(--taupe)', opacity: 0.4 }} />
                 </div>
               </div>
             </div>
