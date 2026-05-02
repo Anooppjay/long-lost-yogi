@@ -11,7 +11,7 @@ export default function Footer() {
         <div style={{ height: 1, background: 'var(--bg-dark)' }} />
       </div>
 
-      <div style={{ background: 'var(--dp)' }} className="px-6 md:px-12 py-8">
+      <div style={{ background: 'var(--green-dark)' }} className="px-6 md:px-12 py-8">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div>
             <div
@@ -21,7 +21,8 @@ export default function Footer() {
                 fontWeight: 600,
                 letterSpacing: '0.2em',
                 textTransform: 'uppercase',
-                color: 'var(--green)',
+                color: 'var(--bg-dark)',
+                opacity: 0.8,
                 marginBottom: 8,
               }}
             >
@@ -46,7 +47,7 @@ export default function Footer() {
               fontWeight: 600,
               letterSpacing: '0.16em',
               textTransform: 'uppercase',
-              color: 'var(--green)',
+              color: 'rgba(217,216,213,0.6)',
               textDecoration: 'none',
             }}
           >
@@ -56,7 +57,7 @@ export default function Footer() {
       </div>
 
       <div
-        style={{ background: 'var(--dp)', borderTop: '1px solid rgba(217,216,213,0.05)' }}
+        style={{ background: 'var(--green-dark)', borderTop: '1px solid rgba(217,216,213,0.05)' }}
         className="px-6 md:px-12 py-12"
       >
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
@@ -80,7 +81,8 @@ export default function Footer() {
                 fontWeight: 600,
                 letterSpacing: '0.24em',
                 textTransform: 'uppercase',
-                color: 'var(--taupe)',
+                color: 'var(--bg-dark)',
+                opacity: 0.8,
                 marginBottom: 16,
               }}
             >
@@ -90,7 +92,7 @@ export default function Footer() {
               style={{
                 fontFamily: 'var(--font-josefin)',
                 fontSize: 11,
-                color: 'rgba(217,216,213,0.5)',
+                color: 'rgba(217,216,213,0.6)',
                 lineHeight: 1.7,
               }}
             >
@@ -110,7 +112,8 @@ export default function Footer() {
                 fontWeight: 600,
                 letterSpacing: '0.2em',
                 textTransform: 'uppercase',
-                color: 'var(--taupe)',
+                color: 'var(--bg-dark)',
+                opacity: 0.8,
                 marginBottom: 20,
               }}
             >
@@ -129,7 +132,7 @@ export default function Footer() {
                   style={{
                     fontFamily: 'var(--font-josefin)',
                     fontSize: 11,
-                    color: 'rgba(217,216,213,0.5)',
+                    color: 'rgba(217,216,213,0.6)',
                     textDecoration: 'none',
                   }}
                 >
@@ -147,7 +150,8 @@ export default function Footer() {
                 fontWeight: 600,
                 letterSpacing: '0.2em',
                 textTransform: 'uppercase',
-                color: 'var(--taupe)',
+                color: 'var(--bg-dark)',
+                opacity: 0.8,
                 marginBottom: 20,
               }}
             >
@@ -166,7 +170,7 @@ export default function Footer() {
                   style={{
                     fontFamily: 'var(--font-josefin)',
                     fontSize: 11,
-                    color: 'rgba(217,216,213,0.5)',
+                    color: 'rgba(217,216,213,0.6)',
                     textDecoration: 'none',
                   }}
                 >
@@ -184,7 +188,8 @@ export default function Footer() {
                 fontWeight: 600,
                 letterSpacing: '0.2em',
                 textTransform: 'uppercase',
-                color: 'var(--taupe)',
+                color: 'var(--bg-dark)',
+                opacity: 0.8,
                 marginBottom: 20,
               }}
             >
@@ -197,7 +202,7 @@ export default function Footer() {
                   style={{
                     fontFamily: 'var(--font-josefin)',
                     fontSize: 11,
-                    color: 'rgba(217,216,213,0.5)',
+                    color: 'rgba(217,216,213,0.6)',
                     cursor: 'default',
                   }}
                 >
@@ -210,14 +215,14 @@ export default function Footer() {
       </div>
 
       <div
-        style={{ background: 'var(--dp)', borderTop: '1px solid rgba(217,216,213,0.08)' }}
+        style={{ background: 'var(--green-dark)', borderTop: '1px solid rgba(217,216,213,0.08)' }}
         className="px-6 md:px-12 py-4"
       >
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
-          <p style={{ fontFamily: 'var(--font-josefin)', fontSize: 10, color: 'rgba(217,216,213,0.3)' }}>
+          <p style={{ fontFamily: 'var(--font-josefin)', fontSize: 10, color: 'rgba(217,216,213,0.4)' }}>
             Â© {new Date().getFullYear()} Long Lost Yogi. All rights reserved.
           </p>
-          <p style={{ fontFamily: 'var(--font-josefin)', fontSize: 10, color: 'rgba(217,216,213,0.3)' }}>
+          <p style={{ fontFamily: 'var(--font-josefin)', fontSize: 10, color: 'rgba(217,216,213,0.4)' }}>
             Store opening soon.
           </p>
         </div>

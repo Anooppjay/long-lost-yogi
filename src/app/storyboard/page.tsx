@@ -15,7 +15,7 @@ export default function StoryboardPage() {
       {/* PAGE HEADER */}
       <section
         className="relative overflow-hidden"
-        style={{ background: 'var(--dp)', padding: '5rem 0 4rem' }}
+        style={{ background: 'var(--green)', padding: '5rem 0 4rem' }}
       >
         <div
           style={{
@@ -59,7 +59,7 @@ export default function StoryboardPage() {
               fontFamily: 'var(--font-josefin)',
               fontWeight: 300,
               fontSize: 12,
-              color: 'rgba(217,216,213,0.42)',
+              color: 'rgba(217,216,213,0.7)',
               maxWidth: 480,
               lineHeight: 1.8,
             }}

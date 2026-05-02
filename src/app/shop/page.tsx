@@ -15,7 +15,7 @@ export default function ShopPage() {
       {/* PAGE HEADER */}
       <section
         className="relative overflow-hidden"
-        style={{ background: 'var(--dp)', padding: '5rem 0 4rem' }}
+        style={{ background: 'var(--green)', padding: '5rem 0 4rem' }}
       >
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0 }}>
           <div style={{ height: 2, background: 'var(--green)' }} />
@@ -50,7 +50,7 @@ export default function ShopPage() {
               fontFamily: 'var(--font-josefin)',
               fontWeight: 300,
               fontSize: 12,
-              color: 'rgba(217,216,213,0.42)',
+              color: 'rgba(217,216,213,0.7)',
               maxWidth: 480,
               lineHeight: 1.8,
             }}

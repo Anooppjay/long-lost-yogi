@@ -63,7 +63,7 @@ export default function CuratorApplyPage() {
 
   return (
     <main style={{ background: 'var(--bg)' }}>
-      <section style={{ background: 'var(--dp)', padding: '5rem 0 4rem' }}>
+      <section style={{ background: 'var(--green)', padding: '5rem 0 4rem' }}>
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0 }}>
           <div style={{ height: 2, background: 'var(--green)' }} />
           <div style={{ height: 1, background: 'var(--taupe)', marginTop: 3 }} />
@@ -87,7 +87,7 @@ export default function CuratorApplyPage() {
               fontFamily: 'var(--font-josefin)',
               fontWeight: 300,
               fontSize: 12,
-              color: 'rgba(217,216,213,0.42)',
+              color: 'rgba(217,216,213,0.7)',
               lineHeight: 1.8,
             }}
           >

@@ -45,7 +45,7 @@ export default function AboutPage() {
       {/* HERO */}
       <section
         className="relative overflow-hidden"
-        style={{ background: 'var(--dp)', padding: '6rem 0 5rem' }}
+        style={{ background: 'var(--green)', padding: '6rem 0 5rem' }}
       >
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0 }}>
           <div style={{ height: 2, background: 'var(--green)' }} />
@@ -83,7 +83,7 @@ export default function AboutPage() {
               fontFamily: 'var(--font-josefin)',
               fontWeight: 300,
               fontSize: 13,
-              color: 'rgba(217,216,213,0.45)',
+              color: 'rgba(217,216,213,0.7)',
               maxWidth: 520,
               lineHeight: 1.8,
             }}

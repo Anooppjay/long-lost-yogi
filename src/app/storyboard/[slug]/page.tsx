@@ -36,7 +36,7 @@ export default function StoryPage({ params }: { params: { slug: string } }) {
       {/* HERO */}
       <section
         className="relative overflow-hidden"
-        style={{ minHeight: 480, background: 'var(--dp)', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}
+        style={{ minHeight: 480, background: 'var(--green)', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end' }}
       >
         <div
           style={{
@@ -66,7 +66,7 @@ export default function StoryPage({ params }: { params: { slug: string } }) {
               style={{
                 fontFamily: 'var(--font-josefin)',
                 fontSize: 9,
-                color: 'rgba(217,216,213,0.45)',
+                color: 'rgba(217,216,213,0.75)',
                 textDecoration: 'none',
                 letterSpacing: '0.14em',
               }}
@@ -145,7 +145,7 @@ export default function StoryPage({ params }: { params: { slug: string } }) {
                 {story.curator.charAt(0)}
               </span>
             </div>
-            <span style={{ fontFamily: 'var(--font-josefin)', fontSize: 10, color: 'rgba(217,216,213,0.6)' }}>
+            <span style={{ fontFamily: 'var(--font-josefin)', fontSize: 10, color: 'rgba(217,216,213,0.7)' }}>
               {story.curator} · {story.curatorRole} ·{' '}
               {new Date(story.date).toLocaleDateString('en-AU', {
                 day: 'numeric',

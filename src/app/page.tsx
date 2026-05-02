@@ -15,7 +15,7 @@ export default function HomePage() {
       {/* HERO */}
       <section
         className="relative overflow-hidden"
-        style={{ background: 'var(--dp)', minHeight: '88vh', display: 'flex', alignItems: 'center' }}
+        style={{ background: 'var(--green)', minHeight: '88vh', display: 'flex', alignItems: 'center' }}
       >
         <div
           style={{
@@ -58,7 +58,7 @@ export default function HomePage() {
               fontWeight: 600,
               letterSpacing: '0.2em',
               textTransform: 'uppercase',
-              color: 'var(--bg-dark)',
+              color: 'var(--bg)',
               opacity: 0.75,
               marginBottom: 18,
             }}
@@ -83,7 +83,7 @@ export default function HomePage() {
               fontFamily: 'var(--font-josefin)',
               fontWeight: 300,
               fontSize: 12,
-              color: 'rgba(217,216,213,0.45)',
+              color: 'rgba(217,216,213,0.7)',
               maxWidth: 420,
               marginBottom: 38,
               lineHeight: 1.8,
@@ -95,8 +95,8 @@ export default function HomePage() {
             <Link
               href="/shop"
               style={{
-                background: 'var(--green)',
-                color: 'var(--bg)',
+                background: 'var(--bg)',
+                color: 'var(--dp)',
                 fontFamily: 'var(--font-josefin)',
                 fontSize: 11,
                 fontWeight: 600,
